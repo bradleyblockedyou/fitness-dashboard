@@ -27,6 +27,8 @@
     --s-basefit:#27A385;
     --s-loadimp:#5B8CFF;
     --s-intensity:#ED5F35;
+    --s-gold:#B08A28;
+    --s-violet:#AC6ED6;
     --mono:'IBM Plex Mono',monospace;
     --sans:'Inter',sans-serif;
   }
@@ -102,6 +104,7 @@
     font-weight:700;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:8px;}
   .card h3 span.badge{font-family:var(--mono);font-size:10px;color:var(--text-faint);text-transform:none;letter-spacing:0;font-weight:400;}
   .card.wide{grid-column:span 3;}
+  .card.span2{grid-column:span 2;}
 
   .fit-num{font-family:var(--mono);font-size:34px;font-weight:600;}
   .fit-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-top:1px solid var(--border-soft);}
@@ -172,12 +175,26 @@
   .weekbars .lab{font-family:var(--mono);font-size:10px;color:var(--text-faint);text-align:center;}
   .weekbars .mi{font-family:var(--mono);font-size:11px;color:var(--text);}
 
+  /* strength */
+  .pr-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+  .pr-chip{
+    display:flex;align-items:center;gap:8px;
+    background:var(--bg-alt);border:1px solid var(--border);border-radius:9px;
+    padding:8px 12px;font-size:12px;
+  }
+  .pr-chip .dot{width:8px;height:8px;border-radius:2px;flex:none;}
+  .pr-chip .nm{color:var(--text-dim);}
+  .pr-chip .val{font-family:var(--mono);color:var(--text);font-weight:600;}
+  .pr-chip .pr{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);}
+  td.ok{color:var(--teal);font-weight:600;}
+  td.fail{color:var(--orange);font-weight:600;}
+
   footer{text-align:center;color:var(--text-faint);font-size:11px;font-family:var(--mono);margin-top:30px;line-height:1.8;}
 
   @media (max-width:900px){
     .hero{grid-template-columns:1fr;}
     .grid{grid-template-columns:1fr;}
-    .card.wide{grid-column:span 1;}
+    .card.wide,.card.span2{grid-column:span 1;}
     .hero-right{grid-template-columns:1fr;}
     .hstat{border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:12px;}
   }
@@ -318,8 +335,41 @@
     </div>
   </div>
 
+  <!-- STRENGTH · GoLift -->
+  <div class="grid">
+    <div class="card wide">
+      <h3>Strength · GoLift <span class="badge" id="liftBadge">—</span></h3>
+      <div class="ts-head" id="liftHead" style="display:none">
+        <div class="legend" id="liftLegend"></div>
+        <div class="ranges" id="liftRanges">
+          <button data-days="84">12W</button>
+          <button data-days="0" class="active">All</button>
+        </div>
+      </div>
+      <div class="chart-wrap" id="liftChart"><div class="tooltip" id="liftTip"></div></div>
+      <div class="pr-chips" id="prChips"></div>
+      <div class="empty-state" id="liftEmpty" style="display:none">
+        Awaiting first GoLift sync — enable Dashboard Sync in GoLift's settings and finish a workout; your lift history and progression will appear here automatically.
+      </div>
+    </div>
+  </div>
+
+  <div class="grid" id="strengthExtras" style="display:none">
+    <div class="card span2">
+      <h3>Recent Lifts <span class="badge" id="liftSessionsRange">—</span></h3>
+      <table>
+        <thead><tr><th>Date</th><th>Lift</th><th>Weight</th><th>Reps</th><th>Result</th></tr></thead>
+        <tbody id="liftBody"></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Body Weight <span class="badge">GoLift log</span></h3>
+      <div id="bwBody"><div class="empty-state">No entries yet.</div></div>
+    </div>
+  </div>
+
   <footer>
-    fully automated · Coros via training-hub API · Oura via API v2 · synced by GitHub Actions<br>
+    fully automated · Coros via training-hub API · Oura via API v2 · GoLift via post-workout push · synced by GitHub Actions<br>
     <span id="footerMeta"></span>
   </footer>
 </div>
@@ -647,6 +697,186 @@ function renderSpark(elId, values, labelId, startLabel, endLabel, isScore){
   $(labelId).innerHTML = `<span>${startLabel}</span><span>${endLabel}</span>`;
 }
 
+/* ---------- strength (GoLift) ---------- */
+const LIFT_COLORS = ['#27A385','#ED5F35','#5B8CFF','#B08A28','#AC6ED6'];
+const KIND_UNITS = { weighted:'lb', bodyweightReps:'reps', timedHold:'sec' };
+let liftView = { days: 0, backup: null };
+
+function showLiftEmpty(){
+  $('liftEmpty').style.display='block';
+}
+
+function liftMeta(backup){
+  const defs = (backup.exercises??[]).slice().sort((a,b)=>a.sortOrder-b.sortOrder);
+  if(defs.length) return defs;
+  // Backups from before exercises were exported: derive from session lift IDs.
+  return [...new Set(backup.sessions.map(s=>s.liftID))].map((key,i)=>(
+    {key, name: key[0].toUpperCase()+key.slice(1), kind:'weighted', setCount:5, fixedReps:5, sortOrder:i}
+  ));
+}
+
+function renderStrength(){
+  const g = liftView.backup;
+  const defs = liftMeta(g);
+  const byKey = new Map(defs.map(d=>[d.key,d]));
+  const weighted = defs.filter(d=>d.kind==='weighted');
+  const colorOf = new Map(weighted.map((d,i)=>[d.key, LIFT_COLORS[i%LIFT_COLORS.length]]));
+
+  $('liftHead').style.display='flex';
+  $('strengthExtras').style.display='grid';
+  $('liftBadge').textContent = `${g.sessions.length} sessions · exported ${String(g.exportDate).slice(0,10)}`;
+
+  // legend
+  $('liftLegend').innerHTML = weighted.map(d=>
+    `<span class="li"><span class="chip" style="background:${colorOf.get(d.key)}"></span>${d.name}</span>`).join('')
+    + `<span class="li" style="color:var(--text-faint)">○ = missed reps</span>`;
+
+  // PR chips (all exercises, any kind)
+  const stateOf = new Map((g.liftStates??[]).map(s=>[s.liftID,s]));
+  $('prChips').innerHTML = defs.map(d=>{
+    const unit = KIND_UNITS[d.kind]??'lb';
+    const sessions = g.sessions.filter(s=>s.liftID===d.key && s.success);
+    const pr = sessions.length ? Math.max(...sessions.map(s=>s.weight)) : null;
+    const cur = stateOf.get(d.key)?.currentWeight;
+    return `<span class="pr-chip"><span class="dot" style="background:${colorOf.get(d.key)??'var(--text-faint)'}"></span>`+
+      `<span class="nm">${d.name}</span>`+
+      `<span class="val">${cur!=null?cur+' '+unit:'—'}</span>`+
+      (pr!=null?`<span class="pr">PR ${pr}</span>`:'')+`</span>`;
+  }).join('');
+
+  renderLiftChart();
+
+  // recent sessions table
+  const rows = g.sessions.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,12);
+  $('liftBody').innerHTML = rows.map(s=>{
+    const d = byKey.get(s.liftID);
+    const unit = KIND_UNITS[d?.kind]??'lb';
+    const target = d ? d.setCount*d.fixedReps : null;
+    return `<tr><td class="date">${shortDate(s.date.slice(0,10))}</td><td>${d?.name??s.liftID}</td>`+
+      `<td class="mono">${s.weight} ${unit}</td>`+
+      `<td class="mono">${s.totalReps||'—'}${target?' / '+target:''}</td>`+
+      `<td class="${s.success?'ok':'fail'}">${s.success?'✓':'✗'}</td></tr>`;
+  }).join('');
+  if(rows.length) $('liftSessionsRange').textContent =
+    shortDate(rows[rows.length-1].date.slice(0,10))+' – '+shortDate(rows[0].date.slice(0,10));
+
+  // body weight
+  const bws = (g.bodyWeights??[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  if(bws.length){
+    const last = bws[bws.length-1], first = bws[0];
+    const delta = last.weightLb - first.weightLb;
+    $('bwBody').innerHTML =
+      `<div class="spark-current"><span>${last.weightLb.toFixed(1)}</span> <small>lb · ${delta<=0?'':'+'}${delta.toFixed(1)} since ${shortDate(first.date.slice(0,10))}</small></div>`+
+      `<div class="spark" id="bwSpark"></div><div class="spark-labels" id="bwSparkLabels"></div>`;
+    const rows14 = bws.slice(-21);
+    renderSpark('bwSpark', rows14.map(b=>b.weightLb), 'bwSparkLabels',
+      shortDate(rows14[0].date.slice(0,10)), shortDate(rows14[rows14.length-1].date.slice(0,10)));
+  }
+}
+
+function renderLiftChart(){
+  const wrap = $('liftChart');
+  const tip = $('liftTip');
+  [...wrap.querySelectorAll('svg')].forEach(n=>n.remove());
+  const g = liftView.backup;
+  if(!g) return;
+
+  const defs = liftMeta(g).filter(d=>d.kind==='weighted');
+  const colorOf = new Map(defs.map((d,i)=>[d.key, LIFT_COLORS[i%LIFT_COLORS.length]]));
+  const cutoff = liftView.days>0 ? Date.now()-liftView.days*86400000 : 0;
+  const sessions = g.sessions
+    .filter(s=>colorOf.has(s.liftID) && new Date(s.date).getTime()>=cutoff)
+    .sort((a,b)=>a.date.localeCompare(b.date));
+  if(sessions.length<2){ wrap.insertAdjacentHTML('beforeend','<div class="empty-state">Not enough sessions in range.</div>'); return; }
+
+  const W = Math.max(640, wrap.clientWidth);
+  const ML=46, MR=110, MT=14, MB=26, H=280;
+  const iw = W-ML-MR;
+  const t0 = new Date(sessions[0].date).getTime(), t1 = new Date(sessions[sessions.length-1].date).getTime();
+  const X = t => ML + ((t-t0)/Math.max(1,t1-t0))*iw;
+  const weights = sessions.map(s=>s.weight);
+  const yMin = Math.max(0, Math.min(...weights)-15), yMax = Math.max(...weights)+15;
+  const Y = v => MT + (H-MT-MB) - ((v-yMin)/(yMax-yMin))*(H-MT-MB);
+
+  const svgNS='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(svgNS,'svg');
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  svg.setAttribute('width',W); svg.setAttribute('height',H);
+  const add=(parent,tag,attrs,text)=>{const el=document.createElementNS(svgNS,tag);
+    for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);
+    if(text!=null)el.textContent=text;parent.appendChild(el);return el;};
+
+  // gridlines
+  const ticks=4;
+  for(let t=0;t<=ticks;t++){
+    const v=yMin+(yMax-yMin)*t/ticks, y=Y(v);
+    add(svg,'line',{x1:ML,x2:W-MR,y1:y,y2:y,class:t===0?'zeroline':'gridline'});
+    add(svg,'text',{x:ML-8,y:y+3,'text-anchor':'end',class:'axis-label'},Math.round(v));
+  }
+  const months=Math.max(1,Math.round((t1-t0)/86400000/30));
+  for(let m=0;m<=Math.min(6,months);m++){
+    const t=t0+(t1-t0)*m/Math.min(6,months);
+    add(svg,'text',{x:X(t),y:H-6,'text-anchor':'middle',class:'axis-label'},
+      new Date(t).toISOString().slice(5,10).replace('-','/'));
+  }
+
+  // series
+  const pts=[];
+  for(const d of defs){
+    const rows = sessions.filter(s=>s.liftID===d.key);
+    if(!rows.length) continue;
+    const color = colorOf.get(d.key);
+    const path = rows.map((s,i)=>(i?'L':'M')+X(new Date(s.date).getTime()).toFixed(1)+' '+Y(s.weight).toFixed(1)).join('');
+    add(svg,'path',{d:path,fill:'none',stroke:color,'stroke-width':2,'stroke-linejoin':'round'});
+    for(const s of rows){
+      const x=X(new Date(s.date).getTime()), y=Y(s.weight);
+      if(!s.success) add(svg,'circle',{cx:x,cy:y,r:3.5,fill:'#131A21',stroke:color,'stroke-width':1.8});
+      pts.push({x,y,s,d,color});
+    }
+    const lastRow=rows[rows.length-1];
+    add(svg,'text',{x:W-MR+8,y:Y(lastRow.weight)+4,fill:color,class:'series-label'},
+      `${d.name} ${lastRow.weight}`);
+  }
+
+  // hover: nearest point
+  const hi=add(svg,'circle',{r:5,fill:'none','stroke-width':2,visibility:'hidden'});
+  const overlay=add(svg,'rect',{x:0,y:0,width:W,height:H,fill:'transparent'});
+  overlay.addEventListener('mousemove',(ev)=>{
+    const box=svg.getBoundingClientRect();
+    const mx=(ev.clientX-box.left)*(W/box.width), my=(ev.clientY-box.top)*(H/box.height);
+    let best=null,bd=Infinity;
+    for(const p of pts){const dd=(p.x-mx)**2+(p.y-my)**2;if(dd<bd){bd=dd;best=p;}}
+    if(!best||bd>28**2){tip.style.display='none';hi.setAttribute('visibility','hidden');return;}
+    hi.setAttribute('cx',best.x);hi.setAttribute('cy',best.y);
+    hi.setAttribute('stroke',best.color);hi.setAttribute('visibility','visible');
+    const target=best.d.setCount*best.d.fixedReps;
+    tip.style.display='block';
+    tip.innerHTML=`<div class="tdate">${best.s.date.slice(0,10)}</div>`+
+      `<div class="trow"><span class="tk"><span class="chip" style="background:${best.color}"></span>${best.d.name}</span>`+
+      `<span class="tv">${best.s.weight} ${KIND_UNITS[best.d.kind]??'lb'}</span></div>`+
+      `<div class="trow"><span class="tk">Reps</span><span class="tv">${best.s.totalReps||'—'} / ${target}</span></div>`+
+      `<div class="trow"><span class="tk">Result</span><span class="tv" style="color:${best.s.success?'var(--teal)':'var(--orange)'}">${best.s.success?'success':'missed'}</span></div>`;
+    const wx=(best.x/W)*wrap.clientWidth;
+    tip.style.left=Math.min(wrap.clientWidth-170,Math.max(0,wx+14))+'px';
+    tip.style.top=Math.max(0,(best.y/H)*wrap.clientHeight-70)+'px';
+  });
+  overlay.addEventListener('mouseleave',()=>{tip.style.display='none';hi.setAttribute('visibility','hidden');});
+
+  wrap.appendChild(svg);
+}
+
+$('liftRanges').addEventListener('click',(e)=>{
+  const btn=e.target.closest('button'); if(!btn) return;
+  liftView.days=Number(btn.dataset.days);
+  [...$('liftRanges').children].forEach(b=>b.classList.toggle('active',b===btn));
+  renderLiftChart();
+});
+
+fetch('golift.json?t='+Date.now())
+  .then(r=>r.ok?r.json():null)
+  .then(g=>{ if(!g||!g.sessions?.length){showLiftEmpty();return;} liftView.backup=g; renderStrength(); })
+  .catch(showLiftEmpty);
+
 /* ---------- init ---------- */
 $('rangeBtns').addEventListener('click',(e)=>{
   const btn = e.target.closest('button'); if(!btn) return;
@@ -660,7 +890,7 @@ new ResizeObserver(()=>{
   if(Math.abs(w-lastW) < 4) return;
   lastW = w;
   clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(renderTsChart,120);
+  resizeTimer = setTimeout(()=>{renderTsChart();renderLiftChart();},120);
 }).observe($('tsChart'));
 
 fetch('data.json?t='+Date.now())
