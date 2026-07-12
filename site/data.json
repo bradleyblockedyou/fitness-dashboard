@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-12T15:45:43.296Z",
+ "generatedAt": "2026-07-12T15:50:48.431Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2258,20 +2258,12 @@
  ],
  "activities": [
   {
-   "date": "2026-07-11",
-   "name": "9km Easy Run",
-   "sportType": 100,
-   "km": 9.01,
-   "sec": 4027,
-   "avgHr": 144
-  },
-  {
    "labelId": "478836278339600388",
    "date": "2026-07-11",
    "name": "Tustin Road Bike",
    "sportType": 200,
    "km": 6.25,
-   "sec": 1585,
+   "sec": 1586,
    "avgHr": 121,
    "trainingLoad": 18
   },
@@ -2291,17 +2283,9 @@
    "name": "9km Easy Run",
    "sportType": 100,
    "km": 9.01,
-   "sec": 4536,
+   "sec": 4027,
    "avgHr": 144,
    "trainingLoad": 114
-  },
-  {
-   "date": "2026-07-10",
-   "name": "5km Time Trial",
-   "sportType": 100,
-   "km": 6.62,
-   "sec": 2662,
-   "avgHr": 161
   },
   {
    "labelId": "478806487372693807",
@@ -2309,51 +2293,43 @@
    "name": "5km Time Trial",
    "sportType": 100,
    "km": 6.62,
-   "sec": 2667,
+   "sec": 2662,
    "avgHr": 161,
    "trainingLoad": 161
   },
   {
    "labelId": "478772076363153414",
-   "date": "2026-07-09",
-   "name": "5.5km Easy Run",
-   "sportType": 100,
-   "km": 5.51,
-   "sec": 2486,
-   "avgHr": 142,
-   "trainingLoad": 63
-  },
-  {
-   "labelId": "478769728358219882",
-   "date": "2026-07-09",
-   "name": "Santa Ana Road Bike",
-   "sportType": 200,
-   "km": 2.51,
-   "sec": 670,
-   "avgHr": 108,
-   "trainingLoad": 3
-  },
-  {
    "date": "2026-07-08",
    "name": "5.5km Easy Run",
    "sportType": 100,
    "km": 5.51,
    "sec": 2385,
-   "avgHr": 142
+   "avgHr": 142,
+   "trainingLoad": 63
+  },
+  {
+   "labelId": "478769728358219882",
+   "date": "2026-07-08",
+   "name": "Santa Ana Road Bike",
+   "sportType": 200,
+   "km": 2.51,
+   "sec": 671,
+   "avgHr": 108,
+   "trainingLoad": 3
   },
   {
    "labelId": "478748941247086595",
-   "date": "2026-07-08",
+   "date": "2026-07-07",
    "name": "200m Repeats",
    "sportType": 100,
    "km": 5.91,
-   "sec": 2710,
+   "sec": 2705,
    "avgHr": 153,
    "trainingLoad": 192
   },
   {
    "labelId": "478746664650178764",
-   "date": "2026-07-08",
+   "date": "2026-07-07",
    "name": "Santa Ana Road Bike",
    "sportType": 200,
    "km": 2.5,
@@ -2362,20 +2338,12 @@
    "trainingLoad": 5
   },
   {
-   "date": "2026-07-07",
-   "name": "200m Repeats",
-   "sportType": 100,
-   "km": 5.91,
-   "sec": 2705,
-   "avgHr": 153
-  },
-  {
    "labelId": "478738018883108866",
    "date": "2026-07-07",
    "name": "Santa Ana Road Bike",
    "sportType": 200,
    "km": 2.44,
-   "sec": 625,
+   "sec": 624,
    "avgHr": 117,
    "trainingLoad": 6
   },
@@ -2390,30 +2358,14 @@
    "trainingLoad": 1
   },
   {
-   "date": "2026-07-05",
-   "name": "10mi Progressive Long Run",
-   "sportType": 100,
-   "km": 10.31,
-   "sec": 4772,
-   "avgHr": 144
-  },
-  {
    "labelId": "478693122778365956",
    "date": "2026-07-05",
    "name": "10mi Progressive Long Run",
    "sportType": 100,
    "km": 10.31,
-   "sec": 5258,
+   "sec": 4772,
    "avgHr": 144,
    "trainingLoad": 155
-  },
-  {
-   "date": "2026-07-04",
-   "name": "4.5mi Easy Run",
-   "sportType": 100,
-   "km": 7.67,
-   "sec": 3599,
-   "avgHr": 143
   },
   {
    "labelId": "478670141754736640",
@@ -2421,17 +2373,9 @@
    "name": "4.5mi Easy Run",
    "sportType": 100,
    "km": 7.67,
-   "sec": 3760,
+   "sec": 3599,
    "avgHr": 143,
    "trainingLoad": 106
-  },
-  {
-   "date": "2026-07-03",
-   "name": "4.5mi Easy Run",
-   "sportType": 100,
-   "km": 7.25,
-   "sec": 3353,
-   "avgHr": 143
   },
   {
    "labelId": "478647239374307433",
@@ -2439,89 +2383,49 @@
    "name": "4.5mi Easy Run",
    "sportType": 100,
    "km": 7.25,
-   "sec": 3361,
+   "sec": 3353,
    "avgHr": 143,
    "trainingLoad": 100
   },
   {
    "labelId": "478633430249144322",
-   "date": "2026-07-03",
-   "name": "Fast 8-4-2s",
-   "sportType": 100,
-   "km": 7.87,
-   "sec": 3639,
-   "avgHr": 147,
-   "trainingLoad": 187
-  },
-  {
    "date": "2026-07-02",
    "name": "Fast 8-4-2s",
    "sportType": 100,
    "km": 7.87,
    "sec": 3415,
-   "avgHr": 147
+   "avgHr": 147,
+   "trainingLoad": 187
   },
   {
    "labelId": "478609902156152832",
-   "date": "2026-07-02",
+   "date": "2026-07-01",
    "name": "Santa Ana Run",
    "sportType": 100,
    "km": 4.86,
-   "sec": 2363,
+   "sec": 2139,
    "avgHr": 144,
    "trainingLoad": 64
   },
   {
-   "date": "2026-07-01",
-   "name": "Santa Ana Run",
-   "sportType": 100,
-   "km": 4.86,
-   "sec": 2363,
-   "avgHr": 144
-  },
-  {
    "labelId": "478586108299477092",
-   "date": "2026-07-01",
+   "date": "2026-06-30",
    "name": "Over and Unders 400m",
    "sportType": 100,
    "km": 8.06,
-   "sec": 3451,
+   "sec": 3307,
    "avgHr": 150,
    "trainingLoad": 138
   },
   {
-   "date": "2026-06-30",
-   "name": "Over and Unders 400m",
-   "sportType": 100,
-   "km": 8.06,
-   "sec": 3311,
-   "avgHr": 150
-  },
-  {
    "labelId": "478563172641439845",
-   "date": "2026-06-30",
-   "name": "4.5mi Easy Run",
-   "sportType": 100,
-   "km": 6.89,
-   "sec": 3064,
-   "avgHr": 144,
-   "trainingLoad": 89
-  },
-  {
    "date": "2026-06-29",
    "name": "4.5mi Easy Run",
    "sportType": 100,
    "km": 6.89,
-   "sec": 2904,
-   "avgHr": 144
-  },
-  {
-   "date": "2026-06-28",
-   "name": "9mi Long Run",
-   "sportType": 100,
-   "km": 14.52,
-   "sec": 6787,
-   "avgHr": 143
+   "sec": 2903,
+   "avgHr": 144,
+   "trainingLoad": 89
   },
   {
    "labelId": "478530626180382723",
@@ -2529,17 +2433,9 @@
    "name": "9mi Long Run",
    "sportType": 100,
    "km": 14.52,
-   "sec": 8027,
+   "sec": 6798,
    "avgHr": 143,
    "trainingLoad": 195
-  },
-  {
-   "date": "2026-06-27",
-   "name": "2.5mi Easy Run",
-   "sportType": 100,
-   "km": 3.68,
-   "sec": 1799,
-   "avgHr": 130
   },
   {
    "labelId": "478508979549405187",
@@ -2547,71 +2443,39 @@
    "name": "2.5mi Easy Run",
    "sportType": 100,
    "km": 3.68,
-   "sec": 1799,
+   "sec": 1793,
    "avgHr": 130,
    "trainingLoad": 31
   },
   {
    "labelId": "478494264723013633",
-   "date": "2026-06-27",
+   "date": "2026-06-26",
    "name": "Steady into Tempo",
    "sportType": 100,
    "km": 6.58,
-   "sec": 2738,
+   "sec": 2739,
    "avgHr": 152,
    "trainingLoad": 121
   },
   {
-   "date": "2026-06-26",
-   "name": "Steady into Tempo",
-   "sportType": 100,
-   "km": 6.58,
-   "sec": 2738,
-   "avgHr": 152
-  },
-  {
    "labelId": "478470788972839214",
-   "date": "2026-06-26",
+   "date": "2026-06-25",
    "name": "3mi Easy Run",
    "sportType": 100,
    "km": 4.84,
-   "sec": 2279,
+   "sec": 2256,
    "avgHr": 136,
    "trainingLoad": 50
   },
   {
-   "date": "2026-06-25",
-   "name": "3mi Easy Run",
-   "sportType": 100,
-   "km": 4.84,
-   "sec": 2279,
-   "avgHr": 136
-  },
-  {
    "labelId": "478447899471020036",
-   "date": "2026-06-25",
-   "name": "5.5mi Easy Run",
-   "sportType": 100,
-   "km": 8.86,
-   "sec": 4248,
-   "avgHr": 140,
-   "trainingLoad": 105
-  },
-  {
    "date": "2026-06-24",
    "name": "5.5mi Easy Run",
    "sportType": 100,
    "km": 8.86,
-   "sec": 4148,
-   "avgHr": 140
-  },
-  {
-   "date": "2026-06-23",
-   "name": "4mi Easy Run",
-   "sportType": 100,
-   "km": 6.44,
-   "sec": 2816,
-   "avgHr": 145
+   "sec": 4157,
+   "avgHr": 140,
+   "trainingLoad": 105
   },
   {
    "labelId": "478412783816311084",
@@ -2619,35 +2483,19 @@
    "name": "4mi Easy Run",
    "sportType": 100,
    "km": 6.44,
-   "sec": 3216,
+   "sec": 2884,
    "avgHr": 145,
    "trainingLoad": 89
   },
   {
    "labelId": "478400922739834986",
-   "date": "2026-06-23",
-   "name": "2.5mi Easy Run",
-   "sportType": 100,
-   "km": 4.04,
-   "sec": 1937,
-   "avgHr": 136,
-   "trainingLoad": 41
-  },
-  {
    "date": "2026-06-22",
    "name": "2.5mi Easy Run",
    "sportType": 100,
    "km": 4.04,
-   "sec": 1937,
-   "avgHr": 136
-  },
-  {
-   "date": "2026-06-21",
-   "name": "9mi Hotspot Long Run",
-   "sportType": 100,
-   "km": 14.49,
-   "sec": 6676,
-   "avgHr": 151
+   "sec": 1916,
+   "avgHr": 136,
+   "trainingLoad": 41
   },
   {
    "labelId": "478369004946227300",
@@ -2655,17 +2503,9 @@
    "name": "9mi Hotspot Long Run",
    "sportType": 100,
    "km": 14.49,
-   "sec": 6676,
+   "sec": 6275,
    "avgHr": 151,
    "trainingLoad": 255
-  },
-  {
-   "date": "2026-06-20",
-   "name": "2mi Easy Run",
-   "sportType": 100,
-   "km": 3.23,
-   "sec": 1695,
-   "avgHr": 125
   },
   {
    "labelId": "478343365065212009",
@@ -2673,7 +2513,7 @@
    "name": "2mi Easy Run",
    "sportType": 100,
    "km": 3.23,
-   "sec": 1695,
+   "sec": 1688,
    "avgHr": 125,
    "trainingLoad": 23
   },
@@ -2683,27 +2523,27 @@
    "name": "3.5mi Easy Run",
    "sportType": 100,
    "km": 5.69,
-   "sec": 2753,
+   "sec": 2473,
    "avgHr": 146,
    "trainingLoad": 81
   },
   {
    "labelId": "478308375577264232",
-   "date": "2026-06-19",
+   "date": "2026-06-18",
    "name": "Rolling 400s",
    "sportType": 100,
    "km": 6.54,
-   "sec": 2888,
+   "sec": 2684,
    "avgHr": 149,
    "trainingLoad": 113
   },
   {
    "labelId": "478285589167243463",
-   "date": "2026-06-18",
+   "date": "2026-06-17",
    "name": "3mi Easy Run",
    "sportType": 100,
    "km": 4.85,
-   "sec": 2137,
+   "sec": 2000,
    "avgHr": 151,
    "trainingLoad": 83
   },
@@ -2723,7 +2563,7 @@
    "name": "2mi Easy Run",
    "sportType": 100,
    "km": 3.23,
-   "sec": 1596,
+   "sec": 1592,
    "avgHr": 130,
    "trainingLoad": 27
   },
@@ -2733,7 +2573,7 @@
    "name": "5mi Long Run",
    "sportType": 100,
    "km": 8.07,
-   "sec": 3927,
+   "sec": 3833,
    "avgHr": 139,
    "trainingLoad": 96
   },
@@ -2743,13 +2583,13 @@
    "name": "2mi Easy Run",
    "sportType": 100,
    "km": 3.23,
-   "sec": 1354,
+   "sec": 1346,
    "avgHr": 147,
    "trainingLoad": 47
   },
   {
    "labelId": "478169487074426984",
-   "date": "2026-06-13",
+   "date": "2026-06-12",
    "name": "2.5mi Easy Run",
    "sportType": 100,
    "km": 4.15,
@@ -2763,7 +2603,7 @@
    "name": "400m Repeats",
    "sportType": 100,
    "km": 5.28,
-   "sec": 2596,
+   "sec": 2328,
    "avgHr": 146,
    "trainingLoad": 114
   },
@@ -2773,7 +2613,7 @@
    "name": "2mi Easy Run",
    "sportType": 100,
    "km": 3.22,
-   "sec": 1503,
+   "sec": 1473,
    "avgHr": 141,
    "trainingLoad": 39
   },
@@ -2783,7 +2623,7 @@
    "name": "200m Repeats",
    "sportType": 100,
    "km": 5.26,
-   "sec": 2630,
+   "sec": 2605,
    "avgHr": 150,
    "trainingLoad": 171
   },
@@ -2793,7 +2633,7 @@
    "name": "3mi Easy Run",
    "sportType": 100,
    "km": 4.84,
-   "sec": 2339,
+   "sec": 2211,
    "avgHr": 141,
    "trainingLoad": 58
   },
@@ -2803,7 +2643,7 @@
    "name": "9mi Long Run",
    "sportType": 100,
    "km": 14.51,
-   "sec": 7760,
+   "sec": 6988,
    "avgHr": 142,
    "trainingLoad": 194
   },
@@ -2813,7 +2653,7 @@
    "name": "Strides",
    "sportType": 100,
    "km": 0.45,
-   "sec": 288,
+   "sec": 285,
    "avgHr": 137,
    "trainingLoad": 17
   },
@@ -2823,37 +2663,37 @@
    "name": "2mi Easy Run",
    "sportType": 100,
    "km": 3.22,
-   "sec": 1612,
+   "sec": 1610,
    "avgHr": 138,
    "trainingLoad": 38
   },
   {
    "labelId": "478005143382556980",
-   "date": "2026-06-06",
+   "date": "2026-06-05",
    "name": "2.75mi Easy Run",
    "sportType": 100,
    "km": 4.45,
-   "sec": 2242,
+   "sec": 2122,
    "avgHr": 142,
    "trainingLoad": 58
   },
   {
    "labelId": "477981727745146885",
-   "date": "2026-06-05",
+   "date": "2026-06-04",
    "name": "Rolling 800s",
    "sportType": 101,
    "km": 6.93,
-   "sec": 2923,
+   "sec": 2920,
    "avgHr": 147,
    "trainingLoad": 109
   },
   {
    "labelId": "477936403236291062",
-   "date": "2026-06-03",
+   "date": "2026-06-02",
    "name": "4mi Easy Run",
    "sportType": 100,
    "km": 6.45,
-   "sec": 3322,
+   "sec": 2994,
    "avgHr": 139,
    "trainingLoad": 74
   },
@@ -2863,7 +2703,7 @@
    "name": "9mi Progressive Long Run",
    "sportType": 100,
    "km": 8.05,
-   "sec": 5113,
+   "sec": 3637,
    "avgHr": 145,
    "trainingLoad": 127
   },
@@ -2883,7 +2723,7 @@
    "name": "Anaheim Run",
    "sportType": 100,
    "km": 0.86,
-   "sec": 522,
+   "sec": 403,
    "avgHr": 130,
    "trainingLoad": 19
   },
@@ -2903,7 +2743,7 @@
    "name": "2.75mi Easy Run",
    "sportType": 100,
    "km": 4.43,
-   "sec": 1900,
+   "sec": 1894,
    "avgHr": 156,
    "trainingLoad": 85
   },
@@ -2913,7 +2753,7 @@
    "name": "9mi Long Run",
    "sportType": 100,
    "km": 12.07,
-   "sec": 7783,
+   "sec": 5767,
    "avgHr": 149,
    "trainingLoad": 216
   },
@@ -2923,23 +2763,23 @@
    "name": "Progression Run",
    "sportType": 101,
    "km": 6.55,
-   "sec": 2940,
+   "sec": 2934,
    "avgHr": 147,
    "trainingLoad": 111
   },
   {
    "labelId": "477611195816247495",
-   "date": "2026-05-20",
+   "date": "2026-05-19",
    "name": "3.5mi Easy Run",
    "sportType": 101,
    "km": 5.65,
-   "sec": 2838,
+   "sec": 2829,
    "avgHr": 139,
    "trainingLoad": 73
   },
   {
    "labelId": "477587597936329004",
-   "date": "2026-05-19",
+   "date": "2026-05-18",
    "name": "Yoga",
    "sportType": 904,
    "km": 0,
@@ -2949,7 +2789,7 @@
   },
   {
    "labelId": "477564904939749483",
-   "date": "2026-05-18",
+   "date": "2026-05-17",
    "name": "Indoor Run",
    "sportType": 101,
    "km": 1.61,
@@ -2959,7 +2799,7 @@
   },
   {
    "labelId": "477564659042386121",
-   "date": "2026-05-18",
+   "date": "2026-05-17",
    "name": "Walk",
    "sportType": 900,
    "km": 0.71,
@@ -2979,61 +2819,61 @@
   },
   {
    "labelId": "477496292300325063",
-   "date": "2026-05-15",
+   "date": "2026-05-14",
    "name": "Tempo 2 Miles",
    "sportType": 100,
    "km": 6.49,
-   "sec": 3078,
+   "sec": 2965,
    "avgHr": 148,
    "trainingLoad": 119
   },
   {
    "labelId": "477449355823972453",
-   "date": "2026-05-13",
+   "date": "2026-05-12",
    "name": "5.5mi Easy Run",
    "sportType": 101,
    "km": 5.02,
-   "sec": 2650,
+   "sec": 2503,
    "avgHr": 133,
    "trainingLoad": 49
   },
   {
    "labelId": "477402507918737411",
-   "date": "2026-05-11",
+   "date": "2026-05-10",
    "name": "6mi Long Run",
    "sportType": 101,
    "km": 9.68,
-   "sec": 4921,
+   "sec": 4825,
    "avgHr": 137,
    "trainingLoad": 116
   },
   {
    "labelId": "477356983681319012",
-   "date": "2026-05-09",
+   "date": "2026-05-08",
    "name": "400m Repeats",
    "sportType": 101,
    "km": 7.15,
-   "sec": 3368,
+   "sec": 3365,
    "avgHr": 145,
    "trainingLoad": 111
   },
   {
    "labelId": "477309207272521748",
-   "date": "2026-05-07",
+   "date": "2026-05-06",
    "name": "Indoor Run",
    "sportType": 101,
    "km": 3.61,
-   "sec": 1804,
+   "sec": 1803,
    "avgHr": 137,
    "trainingLoad": 41
   },
   {
    "labelId": "477285806141112429",
-   "date": "2026-05-06",
+   "date": "2026-05-05",
    "name": "Indoor Run",
    "sportType": 101,
    "km": 3.59,
-   "sec": 1810,
+   "sec": 1803,
    "avgHr": 140,
    "trainingLoad": 48
   },
@@ -3059,21 +2899,21 @@
   },
   {
    "labelId": "477216700117319783",
-   "date": "2026-05-03",
+   "date": "2026-05-02",
    "name": "HOAG OC 5K",
    "sportType": 100,
    "km": 5.14,
-   "sec": 2391,
+   "sec": 2060,
    "avgHr": 172,
    "trainingLoad": 166
   },
   {
    "labelId": "477215760056352774",
-   "date": "2026-05-03",
+   "date": "2026-05-02",
    "name": "Costa Mesa Run",
    "sportType": 100,
    "km": 1.05,
-   "sec": 584,
+   "sec": 583,
    "avgHr": 135,
    "trainingLoad": 15
   },
@@ -3083,7 +2923,7 @@
    "name": "Santa Ana Run",
    "sportType": 100,
    "km": 10.25,
-   "sec": 5858,
+   "sec": 5125,
    "avgHr": 149,
    "trainingLoad": 193
   },
@@ -3093,7 +2933,7 @@
    "name": "Santa Ana Run",
    "sportType": 100,
    "km": 6.22,
-   "sec": 3032,
+   "sec": 2876,
    "avgHr": 157,
    "trainingLoad": 144
   },
@@ -3113,17 +2953,17 @@
    "name": "Santa Ana Run",
    "sportType": 100,
    "km": 3.56,
-   "sec": 2222,
+   "sec": 1807,
    "avgHr": 142,
    "trainingLoad": 47
   },
   {
    "labelId": "476544097235009539",
-   "date": "2026-04-04",
+   "date": "2026-04-03",
    "name": "30 min Run (Aerobic Endurance)",
    "sportType": 100,
    "km": 4.09,
-   "sec": 1933,
+   "sec": 1800,
    "avgHr": 138,
    "trainingLoad": 46
   },
@@ -3133,27 +2973,27 @@
    "name": "60 min Run (Aerobic Endurance)",
    "sportType": 100,
    "km": 8.29,
-   "sec": 4237,
+   "sec": 3600,
    "avgHr": 141,
    "trainingLoad": 99
   },
   {
    "labelId": "476498344032632931",
-   "date": "2026-04-02",
+   "date": "2026-04-01",
    "name": "Tustin Run",
    "sportType": 100,
    "km": 2.72,
-   "sec": 1311,
+   "sec": 1220,
    "avgHr": 148,
    "trainingLoad": 42
   },
   {
    "labelId": "476498343764197482",
-   "date": "2026-04-02",
+   "date": "2026-04-01",
    "name": "Tempo Run",
    "sportType": 100,
    "km": 5.67,
-   "sec": 2348,
+   "sec": 2287,
    "avgHr": 150,
    "trainingLoad": 119
   },
@@ -3163,7 +3003,7 @@
    "name": "45 min Run (Aerobic Endurance)",
    "sportType": 100,
    "km": 6.1,
-   "sec": 2822,
+   "sec": 2700,
    "avgHr": 145,
    "trainingLoad": 83
   },
@@ -3173,17 +3013,17 @@
    "name": "30 min Run (Aerobic Endurance)",
    "sportType": 100,
    "km": 4.46,
-   "sec": 1976,
+   "sec": 1868,
    "avgHr": 140,
    "trainingLoad": 53
   },
   {
    "labelId": "476428565835972611",
-   "date": "2026-03-30",
+   "date": "2026-03-29",
    "name": "Anaerobic Training",
    "sportType": 100,
    "km": 4.75,
-   "sec": 2694,
+   "sec": 2584,
    "avgHr": 137,
    "trainingLoad": 144
   },
@@ -3193,7 +3033,7 @@
    "name": "45 min Run (Aerobic Endurance)",
    "sportType": 100,
    "km": 6.58,
-   "sec": 2912,
+   "sec": 2700,
    "avgHr": 150,
    "trainingLoad": 111
   },
@@ -3203,7 +3043,7 @@
    "name": "45 min Run (Aerobic Endurance)",
    "sportType": 101,
    "km": 6.06,
-   "sec": 2835,
+   "sec": 2700,
    "avgHr": 139,
    "trainingLoad": 68
   },
@@ -3213,17 +3053,17 @@
    "name": "Rolling 800s",
    "sportType": 101,
    "km": 7.6,
-   "sec": 3197,
+   "sec": 3161,
    "avgHr": 151,
    "trainingLoad": 134
   },
   {
    "labelId": "476288770824503296",
-   "date": "2026-03-24",
+   "date": "2026-03-23",
    "name": "Easy Run + Strides",
    "sportType": 101,
    "km": 7.3,
-   "sec": 3440,
+   "sec": 3429,
    "avgHr": 138,
    "trainingLoad": 80
   },
@@ -3243,7 +3083,7 @@
    "name": "Corona Warm Up",
    "sportType": 100,
    "km": 1.36,
-   "sec": 630,
+   "sec": 626,
    "avgHr": 143,
    "trainingLoad": 41
   },
@@ -3253,27 +3093,27 @@
    "name": "Corona Shakeout",
    "sportType": 101,
    "km": 3.29,
-   "sec": 1476,
+   "sec": 1473,
    "avgHr": 133,
    "trainingLoad": 32
   },
   {
    "labelId": "476197985951187149",
-   "date": "2026-03-20",
+   "date": "2026-03-19",
    "name": "Easy Run",
    "sportType": 101,
    "km": 7.02,
-   "sec": 3278,
+   "sec": 3266,
    "avgHr": 128,
    "trainingLoad": 57
   },
   {
    "labelId": "476174895940665443",
-   "date": "2026-03-19",
+   "date": "2026-03-18",
    "name": "Wednesday Workout",
    "sportType": 101,
    "km": 7.39,
-   "sec": 3284,
+   "sec": 3191,
    "avgHr": 139,
    "trainingLoad": 95
   },
@@ -3283,7 +3123,7 @@
    "name": "Easy Run",
    "sportType": 101,
    "km": 6.45,
-   "sec": 2937,
+   "sec": 2933,
    "avgHr": 140,
    "trainingLoad": 82
   },
@@ -3293,7 +3133,7 @@
    "name": "Long Run + Strides",
    "sportType": 100,
    "km": 13.41,
-   "sec": 6733,
+   "sec": 6309,
    "avgHr": 146,
    "trainingLoad": 240
   },
@@ -3303,7 +3143,7 @@
    "name": "Easy Run",
    "sportType": 100,
    "km": 6.45,
-   "sec": 3053,
+   "sec": 2894,
    "avgHr": 148,
    "trainingLoad": 122
   },
@@ -3313,7 +3153,7 @@
    "name": "Santa Ana Run",
    "sportType": 100,
    "km": 6.45,
-   "sec": 3048,
+   "sec": 2847,
    "avgHr": 146,
    "trainingLoad": 103
   },
@@ -3323,17 +3163,17 @@
    "name": "Easy Run + Strides",
    "sportType": 100,
    "km": 9.4,
-   "sec": 5569,
+   "sec": 4545,
    "avgHr": 149,
    "trainingLoad": 207
   },
   {
    "labelId": "475965101025820872",
-   "date": "2026-03-10",
+   "date": "2026-03-09",
    "name": "Training",
    "sportType": 100,
    "km": 6.44,
-   "sec": 3100,
+   "sec": 3047,
    "avgHr": 143,
    "trainingLoad": 96
   },
@@ -3343,7 +3183,7 @@
    "name": "Training",
    "sportType": 100,
    "km": 5.14,
-   "sec": 2455,
+   "sec": 2337,
    "avgHr": 145,
    "trainingLoad": 85
   },
@@ -3363,17 +3203,17 @@
    "name": "LA 5K WU",
    "sportType": 100,
    "km": 1.76,
-   "sec": 852,
+   "sec": 844,
    "avgHr": 137,
    "trainingLoad": 47
   },
   {
    "labelId": "475849355673239652",
-   "date": "2026-03-05",
+   "date": "2026-03-04",
    "name": "3 x mile",
    "sportType": 103,
    "km": 8.26,
-   "sec": 3907,
+   "sec": 3636,
    "avgHr": 153,
    "trainingLoad": 216
   },
@@ -3383,13 +3223,13 @@
    "name": "Long Run 6 miles",
    "sportType": 100,
    "km": 17.16,
-   "sec": 10172,
+   "sec": 9172,
    "avgHr": 146,
    "trainingLoad": 352
   },
   {
    "labelId": "475711296631767241",
-   "date": "2026-02-27",
+   "date": "2026-02-26",
    "name": "3 miles easy",
    "sportType": 101,
    "km": 4.83,
@@ -3399,21 +3239,21 @@
   },
   {
    "labelId": "475686882158608484",
-   "date": "2026-02-26",
+   "date": "2026-02-25",
    "name": "3 x mile",
    "sportType": 100,
    "km": 9.72,
-   "sec": 4305,
+   "sec": 4256,
    "avgHr": 152,
    "trainingLoad": 241
   },
   {
    "labelId": "475663951061876736",
-   "date": "2026-02-25",
+   "date": "2026-02-24",
    "name": "Workout A",
    "sportType": 402,
    "km": 0,
-   "sec": 3067,
+   "sec": 2899,
    "avgHr": 85,
    "trainingLoad": 1
   }
