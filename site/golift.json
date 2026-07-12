@@ -1,0 +1,253 @@
+{
+  "bodyWeights" : [
+
+  ],
+  "exercises" : [
+    {
+      "fixedReps" : 5,
+      "heavyRest" : false,
+      "inWorkoutA" : true,
+      "inWorkoutB" : false,
+      "increment" : 5,
+      "key" : "bench",
+      "kind" : "weighted",
+      "name" : "Bench Press",
+      "setCount" : 5,
+      "sortOrder" : 1,
+      "startingValue" : 45
+    },
+    {
+      "fixedReps" : 0,
+      "heavyRest" : false,
+      "inWorkoutA" : true,
+      "inWorkoutB" : false,
+      "increment" : 5,
+      "key" : "plank",
+      "kind" : "timedHold",
+      "name" : "Plank",
+      "setCount" : 3,
+      "sortOrder" : 6,
+      "startingValue" : 30
+    },
+    {
+      "fixedReps" : 5,
+      "heavyRest" : true,
+      "inWorkoutA" : false,
+      "inWorkoutB" : true,
+      "increment" : 10,
+      "key" : "deadlift",
+      "kind" : "weighted",
+      "name" : "Deadlift",
+      "setCount" : 1,
+      "sortOrder" : 4,
+      "startingValue" : 95
+    },
+    {
+      "fixedReps" : 0,
+      "heavyRest" : false,
+      "inWorkoutA" : false,
+      "inWorkoutB" : true,
+      "increment" : 1,
+      "key" : "hangingKneeRaise",
+      "kind" : "bodyweightReps",
+      "name" : "Hanging Knee Raises",
+      "setCount" : 3,
+      "sortOrder" : 8,
+      "startingValue" : 5
+    },
+    {
+      "fixedReps" : 8,
+      "heavyRest" : false,
+      "inWorkoutA" : true,
+      "inWorkoutB" : false,
+      "increment" : 5,
+      "key" : "bicepCurl",
+      "kind" : "weighted",
+      "name" : "Bicep Curls",
+      "setCount" : 5,
+      "sortOrder" : 5,
+      "startingValue" : 20
+    },
+    {
+      "fixedReps" : 5,
+      "heavyRest" : false,
+      "inWorkoutA" : false,
+      "inWorkoutB" : true,
+      "increment" : 5,
+      "key" : "overheadPress",
+      "kind" : "weighted",
+      "name" : "Overhead Press",
+      "setCount" : 5,
+      "sortOrder" : 3,
+      "startingValue" : 45
+    },
+    {
+      "fixedReps" : 5,
+      "heavyRest" : false,
+      "inWorkoutA" : true,
+      "inWorkoutB" : false,
+      "increment" : 5,
+      "key" : "row",
+      "kind" : "weighted",
+      "name" : "Barbell Row",
+      "setCount" : 5,
+      "sortOrder" : 2,
+      "startingValue" : 65
+    },
+    {
+      "fixedReps" : 5,
+      "heavyRest" : true,
+      "inWorkoutA" : true,
+      "inWorkoutB" : true,
+      "increment" : 10,
+      "key" : "squat",
+      "kind" : "weighted",
+      "name" : "Squat",
+      "setCount" : 5,
+      "sortOrder" : 0,
+      "startingValue" : 45
+    },
+    {
+      "fixedReps" : 0,
+      "heavyRest" : false,
+      "inWorkoutA" : false,
+      "inWorkoutB" : true,
+      "increment" : 1,
+      "key" : "pullup",
+      "kind" : "bodyweightReps",
+      "name" : "Pull-ups",
+      "setCount" : 3,
+      "sortOrder" : 7,
+      "startingValue" : 1
+    }
+  ],
+  "exportDate" : "2026-07-12T23:00:39Z",
+  "liftStates" : [
+    {
+      "consecutiveFailures" : 1,
+      "currentWeight" : 70,
+      "liftID" : "bench"
+    },
+    {
+      "consecutiveFailures" : 0,
+      "currentWeight" : 115,
+      "liftID" : "squat"
+    },
+    {
+      "consecutiveFailures" : 0,
+      "currentWeight" : 45,
+      "liftID" : "overheadPress"
+    },
+    {
+      "consecutiveFailures" : 1,
+      "currentWeight" : 70,
+      "liftID" : "row"
+    },
+    {
+      "consecutiveFailures" : 0,
+      "currentWeight" : 95,
+      "liftID" : "deadlift"
+    },
+    {
+      "consecutiveFailures" : 0,
+      "currentWeight" : 5,
+      "liftID" : "hangingKneeRaise"
+    },
+    {
+      "consecutiveFailures" : 1,
+      "currentWeight" : 35,
+      "liftID" : "plank"
+    },
+    {
+      "consecutiveFailures" : 0,
+      "currentWeight" : 1,
+      "liftID" : "pullup"
+    },
+    {
+      "consecutiveFailures" : 1,
+      "currentWeight" : 20,
+      "liftID" : "bicepCurl"
+    }
+  ],
+  "notes" : [
+
+  ],
+  "progress" : {
+    "nextWorkout" : "B",
+    "skippedWorkoutCount" : 1,
+    "squatDeadliftRestSeconds" : 180,
+    "upperBodyRestSeconds" : 180
+  },
+  "sessions" : [
+    {
+      "date" : "2026-07-06T22:33:11Z",
+      "liftID" : "bicepCurl",
+      "success" : true,
+      "totalReps" : 0,
+      "weight" : 15
+    },
+    {
+      "date" : "2026-07-06T22:33:11Z",
+      "liftID" : "plank",
+      "success" : true,
+      "totalReps" : 0,
+      "weight" : 30
+    },
+    {
+      "date" : "2026-07-06T22:33:11Z",
+      "liftID" : "squat",
+      "success" : true,
+      "totalReps" : 0,
+      "weight" : 95
+    },
+    {
+      "date" : "2026-07-06T22:33:11Z",
+      "liftID" : "bench",
+      "success" : true,
+      "totalReps" : 0,
+      "weight" : 65
+    },
+    {
+      "date" : "2026-07-06T22:33:11Z",
+      "liftID" : "row",
+      "success" : true,
+      "totalReps" : 0,
+      "weight" : 65
+    },
+    {
+      "date" : "2026-07-11T03:26:28Z",
+      "liftID" : "plank",
+      "success" : true,
+      "totalReps" : 0,
+      "weight" : 35
+    },
+    {
+      "date" : "2026-07-11T03:26:28Z",
+      "liftID" : "bicepCurl",
+      "success" : true,
+      "totalReps" : 0,
+      "weight" : 20
+    },
+    {
+      "date" : "2026-07-11T03:26:28Z",
+      "liftID" : "bench",
+      "success" : true,
+      "totalReps" : 15,
+      "weight" : 70
+    },
+    {
+      "date" : "2026-07-11T03:26:28Z",
+      "liftID" : "squat",
+      "success" : true,
+      "totalReps" : 25,
+      "weight" : 105
+    },
+    {
+      "date" : "2026-07-11T03:26:28Z",
+      "liftID" : "row",
+      "success" : true,
+      "totalReps" : 0,
+      "weight" : 70
+    }
+  ]
+}
