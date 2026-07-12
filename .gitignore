@@ -2,3 +2,4 @@
 node_modules/
 sync/probe-output/
 .DS_Store
+.claude/settings.local.json
