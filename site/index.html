@@ -581,8 +581,9 @@ function renderAll(data){
     renderSpark('hrvSpark', hrvRows.map(h=>Math.round(h.hrv)), 'hrvSparkLabels', shortDate(hrvRows[0].date), shortDate(lastH.date));
   }
 
-  // runs table (running sports only)
-  const runs = (data.activities??[]).filter(a=>!a.sportType || Math.floor(a.sportType/100)===1).slice(0,10);
+  // running sports only (sportType 1xx) — bikes/strength stay out of run stats
+  const allRuns = (data.activities??[]).filter(a=>!a.sportType || Math.floor(a.sportType/100)===1);
+  const runs = allRuns.slice(0,10);
   const tbody = $('runsBody');
   tbody.innerHTML = '';
   runs.forEach(r=>{
@@ -597,9 +598,9 @@ function renderAll(data){
   });
   if(runs.length) $('runsRange').textContent = shortDate(runs[runs.length-1].date)+' – '+shortDate(runs[0].date);
 
-  // weekly mileage
+  // weekly mileage (runs only)
   const weeks = {};
-  (data.activities??[]).forEach(r=>{
+  allRuns.forEach(r=>{
     const mon = mondayOf(new Date(r.date+'T12:00:00'));
     const key = mon.toISOString().slice(0,10);
     weeks[key] = (weeks[key]||0) + (r.km??0)*KM_TO_MI;
