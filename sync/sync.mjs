@@ -47,7 +47,21 @@ function mergeActivities(oldActs = [], newActs = []) {
   const keyOf = (a) => a.labelId ?? `${a.date}|${a.name}|${a.sec}`;
   const map = new Map(oldActs.map((a) => [keyOf(a), a]));
   for (const a of newActs) map.set(keyOf(a), { ...map.get(keyOf(a)), ...a });
-  return [...map.values()].sort((a, b) => b.date.localeCompare(a.date));
+  let merged = [...map.values()];
+  // Drop id-less rows (fixture/seed era) that duplicate an id'd activity with the
+  // same name within a day — dates can differ by one because seeds were logged in
+  // local time while the API reports epoch start times.
+  const dayMs = 86400000;
+  merged = merged.filter((a) => {
+    if (a.labelId) return true;
+    return !merged.some(
+      (b) =>
+        b.labelId &&
+        b.name === a.name &&
+        Math.abs(new Date(b.date) - new Date(a.date)) <= dayMs,
+    );
+  });
+  return merged.sort((a, b) => b.date.localeCompare(a.date));
 }
 
 // Recursively hunt for a numeric field by key regex — used for fields whose exact
@@ -115,14 +129,19 @@ function parseDailyRecords(dayList) {
     }));
 }
 
+const TZ = process.env.DASH_TZ || 'America/Los_Angeles';
+const localDate = (epochSec) =>
+  new Date(Number(epochSec) * 1000).toLocaleDateString('en-CA', { timeZone: TZ });
+
 function parseActivities(items) {
   return items.map((a) => ({
     labelId: a.labelId != null ? String(a.labelId) : undefined,
-    date: a.startTime ? iso(new Date(Number(a.startTime) * 1000)) : fromCompact(a.happenDay ?? ''),
+    date: a.startTime ? localDate(a.startTime) : fromCompact(a.happenDay ?? ''),
     name: a.name || a.remark || SPORT_NAMES[a.sportType] || `Sport ${a.sportType}`,
     sportType: a.sportType,
     km: a.distance != null ? +(a.distance / 1000).toFixed(2) : null,
-    sec: a.totalTime ?? a.workoutTime ?? null,
+    // workoutTime is moving/workout duration (what COROS displays); totalTime includes pauses
+    sec: a.workoutTime ?? a.totalTime ?? null,
     avgHr: a.avgHr ?? null,
     trainingLoad: a.trainingLoad ?? null,
   }));
