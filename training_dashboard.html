@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Command Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0E13;
+    --bg-alt:#0D1319;
+    --surface:#131A21;
+    --surface-2:#182029;
+    --border:#232E39;
+    --border-soft:#1A232C;
+    --text:#E9EFF3;
+    --text-dim:#8FA3B3;
+    --text-faint:#4E5F6C;
+    --teal:#4FE0C0;
+    --teal-dim:rgba(79,224,192,0.12);
+    --orange:#FF7A54;
+    --orange-dim:rgba(255,122,84,0.12);
+    --amber:#E8B463;
+    --amber-dim:rgba(232,180,99,0.10);
+    --mono:'IBM Plex Mono',monospace;
+    --sans:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:radial-gradient(ellipse 1200px 600px at 20% -10%, #10222020 0%, transparent 60%), var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    padding:28px 20px 60px;
+    min-height:100vh;
+  }
+  .wrap{max-width:1180px;margin:0 auto;}
+
+  /* header */
+  .topbar{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    flex-wrap:wrap;gap:16px;
+    padding-bottom:20px;margin-bottom:24px;
+    border-bottom:1px solid var(--border-soft);
+  }
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.18em;
+    color:var(--teal);text-transform:uppercase;margin-bottom:6px;
+  }
+  h1{font-size:26px;font-weight:800;letter-spacing:-0.01em;}
+  .sub{color:var(--text-dim);font-size:13px;margin-top:4px;}
+  .top-right{text-align:right;}
+  #syncTime{font-family:var(--mono);font-size:12px;color:var(--text-faint);}
+  .refresh-btn{
+    font-family:var(--sans);font-weight:600;font-size:13px;
+    background:var(--teal-dim);color:var(--teal);border:1px solid rgba(79,224,192,0.35);
+    padding:9px 16px;border-radius:7px;cursor:pointer;margin-top:8px;
+    transition:all .15s ease;
+  }
+  .refresh-btn:hover{background:rgba(79,224,192,0.22);}
+  .refresh-btn:disabled{opacity:0.5;cursor:wait;}
+  #statusMsg{font-family:var(--mono);font-size:11px;margin-top:6px;color:var(--text-faint);min-height:14px;}
+  #statusMsg.err{color:var(--orange);}
+  #statusMsg.ok{color:var(--teal);}
+
+  /* hero */
+  .hero{
+    display:grid;grid-template-columns:220px 1fr;gap:28px;
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:26px;margin-bottom:22px;align-items:center;
+  }
+  .ring-wrap{position:relative;width:200px;height:200px;justify-self:center;}
+  .ring-wrap svg{transform:rotate(-90deg);}
+  .ring-bg{fill:none;stroke:var(--border);stroke-width:10;}
+  .ring-fg{fill:none;stroke:var(--teal);stroke-width:10;stroke-linecap:round;
+    filter:drop-shadow(0 0 8px rgba(79,224,192,0.55));transition:stroke-dashoffset .6s ease;}
+  .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .ring-num{font-family:var(--mono);font-size:44px;font-weight:600;line-height:1;color:var(--teal);}
+  .ring-label{font-size:11px;color:var(--text-dim);letter-spacing:0.08em;text-transform:uppercase;margin-top:6px;}
+  .ring-level{font-size:12px;color:var(--text);margin-top:10px;font-weight:600;}
+  .ring-eta{font-family:var(--mono);font-size:11px;color:var(--text-faint);margin-top:2px;}
+
+  .hero-right{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .hstat{border-left:1px solid var(--border);padding-left:18px;}
+  .hstat .k{font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
+  .hstat .v{font-family:var(--mono);font-size:26px;font-weight:600;color:var(--text);}
+  .hstat .v small{font-size:13px;color:var(--text-faint);font-weight:400;}
+  .hstat .tag{display:inline-block;margin-top:8px;font-size:11px;padding:2px 8px;border-radius:20px;
+    background:var(--teal-dim);color:var(--teal);font-weight:600;}
+  .loadbar{height:6px;background:var(--border-soft);border-radius:3px;margin-top:10px;overflow:hidden;}
+  .loadbar-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--orange));border-radius:3px;}
+
+  /* grid of cards */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;}
+  .card h3{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim);
+    font-weight:700;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;}
+  .card h3 span.badge{font-family:var(--mono);font-size:10px;color:var(--text-faint);text-transform:none;letter-spacing:0;}
+
+  .fit-num{font-family:var(--mono);font-size:34px;font-weight:600;}
+  .fit-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-top:1px solid var(--border-soft);}
+  .fit-row:first-of-type{border-top:none;}
+  .fit-row .k{font-size:12.5px;color:var(--text-dim);}
+  .fit-row .v{font-family:var(--mono);font-size:13.5px;color:var(--text);}
+  .goal-flag{margin-top:12px;padding:10px 12px;background:var(--orange-dim);border:1px solid rgba(255,122,84,0.3);
+    border-radius:8px;font-size:11.5px;color:var(--orange);line-height:1.5;}
+  .goal-flag b{color:#ffb69e;}
+
+  .spark{display:flex;align-items:flex-end;gap:4px;height:70px;margin-top:6px;}
+  .spark .bar{flex:1;background:var(--teal);border-radius:2px 2px 0 0;position:relative;min-height:3px;opacity:0.85;}
+  .spark .bar.low{background:var(--text-faint);}
+  .spark .bar.mid{background:var(--amber);}
+  .spark-labels{display:flex;justify-content:space-between;font-size:9.5px;color:var(--text-faint);
+    font-family:var(--mono);margin-top:6px;}
+  .spark-current{font-family:var(--mono);font-size:26px;font-weight:600;margin-bottom:2px;}
+  .spark-current small{font-size:12px;color:var(--text-faint);font-weight:400;}
+
+  /* runs table */
+  .card.wide{grid-column:span 3;}
+  table{width:100%;border-collapse:collapse;}
+  th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-faint);
+    font-weight:600;padding:0 10px 10px;border-bottom:1px solid var(--border);}
+  td{padding:10px;font-size:13px;border-bottom:1px solid var(--border-soft);}
+  td.date{font-family:var(--mono);color:var(--text-dim);white-space:nowrap;}
+  td.mono{font-family:var(--mono);}
+  tr:last-child td{border-bottom:none;}
+  tr:hover td{background:var(--surface-2);}
+
+  .weekbars{display:flex;gap:10px;align-items:flex-end;height:90px;margin-top:10px;}
+  .weekbars .wb{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;}
+  .weekbars .fill{width:100%;background:var(--teal);border-radius:4px 4px 0 0;opacity:0.85;}
+  .weekbars .lab{font-family:var(--mono);font-size:10px;color:var(--text-faint);text-align:center;}
+  .weekbars .mi{font-family:var(--mono);font-size:11px;color:var(--text);}
+
+  /* manual oura section */
+  .manual{
+    border:1px dashed rgba(232,180,99,0.4);background:var(--amber-dim);
+    border-radius:14px;padding:20px;margin-bottom:16px;
+  }
+  .manual h3{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--amber);font-weight:700;
+    display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+  .manual .note{font-size:12px;color:var(--text-dim);margin-bottom:16px;line-height:1.5;}
+  .manual-form{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:10px;align-items:end;}
+  .fld label{display:block;font-size:10.5px;color:var(--text-dim);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.05em;}
+  .fld input{width:100%;background:var(--bg-alt);border:1px solid var(--border);border-radius:7px;
+    padding:9px 10px;color:var(--text);font-family:var(--mono);font-size:13px;}
+  .fld input:focus{outline:none;border-color:var(--amber);}
+  .save-btn{background:var(--amber);color:#241a08;border:none;border-radius:7px;padding:10px 18px;
+    font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap;}
+  .save-btn:hover{filter:brightness(1.08);}
+  .oura-log{margin-top:16px;}
+  .oura-log table td, .oura-log table th{padding:8px 10px;}
+  .empty{color:var(--text-faint);font-size:12.5px;padding:10px 0;}
+
+  footer{text-align:center;color:var(--text-faint);font-size:11px;font-family:var(--mono);margin-top:30px;}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;}
+    .grid{grid-template-columns:1fr;}
+    .card.wide{grid-column:span 1;}
+    .manual-form{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div>
+      <div class="eyebrow">Training Command Center</div>
+      <h1>Bradley — Long Beach Half Build</h1>
+      <div class="sub">Coros Pace 4 · live data &nbsp;+&nbsp; manual Oura log · Goal: sub-1:59, 10/10</div>
+    </div>
+    <div class="top-right">
+      <button class="refresh-btn" id="refreshBtn" onclick="refreshCoros()">↻ Pull latest from Coros</button>
+      <div id="statusMsg"></div>
+      <div id="syncTime"></div>
+    </div>
+  </div>
+
+  <!-- HERO: recovery ring + today's load -->
+  <div class="hero">
+    <div class="ring-wrap">
+      <svg width="200" height="200" viewBox="0 0 200 200">
+        <circle class="ring-bg" cx="100" cy="100" r="80"></circle>
+        <circle class="ring-fg" id="recoveryRing" cx="100" cy="100" r="80"
+          stroke-dasharray="502.7" stroke-dashoffset="502.7"></circle>
+      </svg>
+      <div class="ring-center">
+        <div class="ring-num" id="recoveryPct">--</div>
+        <div class="ring-label">Recovery</div>
+        <div class="ring-level" id="recoveryLevel">—</div>
+        <div class="ring-eta" id="recoveryEta">—</div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hstat">
+        <div class="k">Training Load Ratio</div>
+        <div class="v" id="loadRatio">--</div>
+        <div class="loadbar"><div class="loadbar-fill" id="loadBar" style="width:0%"></div></div>
+        <span class="tag" id="loadTag">—</span>
+      </div>
+      <div class="hstat">
+        <div class="k">Short / Long Term</div>
+        <div class="v" id="loadShortLong">-- <small>/ --</small></div>
+        <div style="font-size:11px;color:var(--text-faint);margin-top:10px;font-family:var(--mono);" id="loadDate">—</div>
+      </div>
+      <div class="hstat">
+        <div class="k">Resting HR (latest)</div>
+        <div class="v" id="rhrLatest">-- <small>bpm</small></div>
+        <div style="font-size:11px;color:var(--text-faint);margin-top:10px;font-family:var(--mono);" id="rhrDate">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID: fitness / RHR trend / sleep trend -->
+  <div class="grid">
+    <div class="card">
+      <h3>Fitness Assessment <span class="badge">Coros model</span></h3>
+      <div class="fit-num" id="vo2max">--</div>
+      <div style="font-size:11px;color:var(--text-dim);margin-bottom:10px;">VO2max · Running Level <span id="runLevel" style="font-family:var(--mono);color:var(--text);">--</span></div>
+      <div class="fit-row"><span class="k">Threshold pace</span><span class="v" id="thresholdPace">--</span></div>
+      <div class="fit-row"><span class="k">5K predicted</span><span class="v" id="pred5k">--</span></div>
+      <div class="fit-row"><span class="k">10K predicted</span><span class="v" id="pred10k">--</span></div>
+      <div class="fit-row"><span class="k">Half predicted</span><span class="v" id="predHalf">--</span></div>
+      <div class="fit-row"><span class="k">Marathon predicted</span><span class="v" id="predMarathon">--</span></div>
+      <div class="goal-flag" id="goalFlag">—</div>
+    </div>
+
+    <div class="card">
+      <h3>Resting HR <span class="badge">14 days</span></h3>
+      <div class="spark-current"><span id="rhrCurrent">--</span> <small>bpm today</small></div>
+      <div class="spark" id="rhrSpark"></div>
+      <div class="spark-labels" id="rhrSparkLabels"><span></span><span></span></div>
+    </div>
+
+    <div class="card">
+      <h3>Sleep Score <span class="badge">7 nights</span></h3>
+      <div class="spark-current"><span id="sleepCurrent">--</span> <small>last night</small></div>
+      <div class="spark" id="sleepSpark"></div>
+      <div class="spark-labels" id="sleepSparkLabels"><span></span><span></span></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card wide">
+      <h3>Recent Runs <span class="badge" id="runsRange">—</span></h3>
+      <table>
+        <thead><tr><th>Date</th><th>Workout</th><th>Distance</th><th>Duration</th><th>Pace /mi</th><th>Avg HR</th></tr></thead>
+        <tbody id="runsBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card wide">
+      <h3>Weekly Mileage <span class="badge">last 4 weeks, Mon–Sun</span></h3>
+      <div class="weekbars" id="weekBars"></div>
+    </div>
+  </div>
+
+  <!-- MANUAL OURA LOG -->
+  <div class="manual">
+    <h3>Oura Log <span class="badge" style="color:var(--text-faint);font-family:var(--mono);text-transform:none;">manual entry — no Oura connector available yet</span></h3>
+    <div class="note">Coros data above pulls live. Oura isn't connected to this workspace, so log today's numbers here — they're saved to this dashboard and will build a trend line same as the Coros metrics do.</div>
+    <div class="manual-form">
+      <div class="fld"><label>Date</label><input type="date" id="ouraDate"></div>
+      <div class="fld"><label>Readiness</label><input type="number" id="ouraReadiness" placeholder="0–100"></div>
+      <div class="fld"><label>Sleep Score</label><input type="number" id="ouraSleep" placeholder="0–100"></div>
+      <div class="fld"><label>HRV (ms)</label><input type="number" id="ouraHrv" placeholder="e.g. 42"></div>
+      <button class="save-btn" onclick="saveOura()">Save entry</button>
+    </div>
+    <div class="oura-log">
+      <table>
+        <thead><tr><th>Date</th><th>Readiness</th><th>Sleep</th><th>HRV</th></tr></thead>
+        <tbody id="ouraBody"><tr><td colspan="4" class="empty">No entries yet — log today's Oura numbers above.</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>Coros data seeded from live snapshot · use "Pull latest from Coros" to refresh via MCP</footer>
+</div>
+
+<script>
+/* ---------- seed data (real snapshot pulled 2026-07-12) ---------- */
+const SEED = {
+  recovery: {percent:98, level:"Heavy training allowed", fullRecoveryHours:6},
+  trainingLoad: {date:"2026-07-12", shortTerm:93, longTerm:81, ratio:1.14, comment:"Optimized"},
+  loadTrend: [ // oldest -> newest, ratio
+    ["06-29",1.31],["06-30",1.35],["07-01",1.29],["07-02",1.41],["07-03",1.37],
+    ["07-04",1.36],["07-05",1.41],["07-06",1.25],["07-07",1.39],["07-08",1.30],
+    ["07-09",1.15],["07-10",1.23],["07-11",1.31],["07-12",1.14]
+  ],
+  fitness: {vo2max:39, runningLevel:66, thresholdPaceKm:"5:47", pred5k:"27:57", pred10k:"59:16", predHalf:"2:15:20", predMarathon:"4:52:30"},
+  restingHR: [ // oldest -> newest
+    ["06-29",65],["06-30",63],["07-01",66],["07-02",66],["07-03",63],["07-04",63],
+    ["07-05",62],["07-06",64],["07-07",62],["07-08",65],["07-09",64],["07-10",64],["07-11",66]
+  ],
+  sleep: [ // oldest -> newest, score
+    ["07-05",33],["07-06",37],["07-07",45],["07-08",97],["07-09",34],["07-10",87],["07-11",80]
+  ],
+  runs: [
+    {date:"2026-07-11", label:"9km Easy Run", km:9.01, sec:4027, hr:144},
+    {date:"2026-07-10", label:"5km Time Trial", km:6.62, sec:2662, hr:161},
+    {date:"2026-07-08", label:"5.5km Easy Run", km:5.51, sec:2385, hr:142},
+    {date:"2026-07-07", label:"200m Repeats", km:5.91, sec:2705, hr:153},
+    {date:"2026-07-05", label:"10mi Progressive Long Run", km:10.31, sec:4772, hr:144},
+    {date:"2026-07-04", label:"4.5mi Easy Run", km:7.67, sec:3599, hr:143},
+    {date:"2026-07-03", label:"4.5mi Easy Run", km:7.25, sec:3353, hr:143},
+    {date:"2026-07-02", label:"Fast 8-4-2s", km:7.87, sec:3415, hr:147},
+    {date:"2026-07-01", label:"Santa Ana Run", km:4.86, sec:2363, hr:144},
+    {date:"2026-06-30", label:"Over and Unders 400m", km:8.06, sec:3311, hr:150},
+    {date:"2026-06-29", label:"4.5mi Easy Run", km:6.89, sec:2904, hr:144},
+    {date:"2026-06-28", label:"9mi Long Run", km:14.52, sec:6787, hr:143},
+    {date:"2026-06-27", label:"2.5mi Easy Run", km:3.68, sec:1799, hr:130},
+    {date:"2026-06-26", label:"Steady into Tempo", km:6.58, sec:2738, hr:152},
+    {date:"2026-06-25", label:"3mi Easy Run", km:4.84, sec:2279, hr:136},
+    {date:"2026-06-24", label:"5.5mi Easy Run", km:8.86, sec:4148, hr:140},
+    {date:"2026-06-23", label:"4mi Easy Run", km:6.44, sec:2816, hr:145},
+    {date:"2026-06-22", label:"2.5mi Easy Run", km:4.04, sec:1937, hr:136},
+    {date:"2026-06-21", label:"9mi Hotspot Long Run", km:14.49, sec:6676, hr:151},
+    {date:"2026-06-20", label:"2mi Easy Run", km:3.23, sec:1695, hr:125}
+  ]
+};
+const GOAL_HALF_SEC = 1*3600 + 59*60; // sub-1:59
+
+/* ---------- helpers ---------- */
+const KM_TO_MI = 0.621371;
+function fmtSec(s){s=Math.round(s);const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sec=s%60;
+  return (h>0?h+":"+String(m).padStart(2,'0'):m)+":"+String(sec).padStart(2,'0');}
+function paceStr(secPerUnit){const m=Math.floor(secPerUnit/60),s=Math.round(secPerUnit%60);return m+":"+String(s).padStart(2,'0');}
+function parseClock(str){ // "H:MM:SS" or "MM:SS" -> seconds
+  const parts=str.split(':').map(Number);
+  if(parts.length===3) return parts[0]*3600+parts[1]*60+parts[2];
+  return parts[0]*60+parts[1];
+}
+function mondayOf(d){const day=(d.getDay()+6)%7;const m=new Date(d);m.setDate(d.getDate()-day);m.setHours(0,0,0,0);return m;}
+
+/* ---------- render ---------- */
+function renderAll(data){
+  // recovery ring
+  const circumference = 2*Math.PI*80;
+  const pct = data.recovery.percent;
+  document.getElementById('recoveryPct').textContent = pct;
+  document.getElementById('recoveryLevel').textContent = data.recovery.level;
+  document.getElementById('recoveryEta').textContent = pct < 100 ? "full in ~"+data.recovery.fullRecoveryHours+"h" : "fully recovered";
+  const ring = document.getElementById('recoveryRing');
+  ring.setAttribute('stroke-dasharray', circumference.toFixed(1));
+  ring.setAttribute('stroke-dashoffset', (circumference*(1-pct/100)).toFixed(1));
+
+  // load
+  document.getElementById('loadRatio').textContent = data.trainingLoad.ratio.toFixed(2);
+  document.getElementById('loadShortLong').innerHTML = data.trainingLoad.shortTerm + ' <small>/ ' + data.trainingLoad.longTerm + '</small>';
+  document.getElementById('loadDate').textContent = data.trainingLoad.date;
+  document.getElementById('loadTag').textContent = data.trainingLoad.comment;
+  const ratioPct = Math.min(100, (data.trainingLoad.ratio/1.8)*100);
+  document.getElementById('loadBar').style.width = ratioPct+'%';
+
+  // RHR latest
+  const rhrLatest = data.restingHR[data.restingHR.length-1];
+  document.getElementById('rhrLatest').innerHTML = rhrLatest[1] + ' <small>bpm</small>';
+  document.getElementById('rhrDate').textContent = rhrLatest[0];
+  document.getElementById('rhrCurrent').textContent = rhrLatest[1];
+
+  // fitness
+  document.getElementById('vo2max').textContent = data.fitness.vo2max;
+  document.getElementById('runLevel').textContent = data.fitness.runningLevel;
+  document.getElementById('thresholdPace').textContent = paceStr(parseClock(data.fitness.thresholdPaceKm.includes(':')?data.fitness.thresholdPaceKm:data.fitness.thresholdPaceKm)*KM_TO_MI*60/60) + '/mi';
+  // simpler: recompute threshold pace per mile directly from km pace
+  const thKmSec = parseClock(data.fitness.thresholdPaceKm);
+  document.getElementById('thresholdPace').textContent = paceStr(thKmSec*1.60934)+'/mi';
+  document.getElementById('pred5k').textContent = data.fitness.pred5k;
+  document.getElementById('pred10k').textContent = data.fitness.pred10k;
+  document.getElementById('predHalf').textContent = data.fitness.predHalf;
+  document.getElementById('predMarathon').textContent = data.fitness.predMarathon;
+
+  const halfSec = parseClock(data.fitness.predHalf);
+  const gapSec = halfSec - GOAL_HALF_SEC;
+  const goalFlag = document.getElementById('goalFlag');
+  if(gapSec > 0){
+    goalFlag.innerHTML = 'Model predicts <b>'+fmtSec(gapSec)+' slower</b> than your sub-1:59 goal. Coros\' VO2max estimate updates slowly and weights recent runs — it likely hasn\'t caught up to your last month of gains yet. Watch this number after your next hard effort, not as today\'s verdict.';
+  } else {
+    goalFlag.innerHTML = 'Model now predicts you\'re <b>'+fmtSec(-gapSec)+' inside</b> your sub-1:59 goal pace. 🎯';
+    goalFlag.style.background = 'var(--teal-dim)';
+    goalFlag.style.borderColor = 'rgba(79,224,192,0.35)';
+    goalFlag.style.color = 'var(--teal)';
+  }
+
+  // sparklines
+  renderSpark('rhrSpark', data.restingHR.map(x=>x[1]), 'rhrSparkLabels', data.restingHR[0][0], data.restingHR[data.restingHR.length-1][0], true);
+  document.getElementById('sleepCurrent').textContent = data.sleep[data.sleep.length-1][1];
+  renderSpark('sleepSpark', data.sleep.map(x=>x[1]), 'sleepSparkLabels', data.sleep[0][0], data.sleep[data.sleep.length-1][0], false, true);
+
+  // runs table
+  const tbody = document.getElementById('runsBody');
+  tbody.innerHTML = '';
+  data.runs.slice(0,10).forEach(r=>{
+    const mi = r.km*KM_TO_MI;
+    const paceSecPerMi = r.sec/mi;
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td class="date">'+r.date.slice(5)+'</td><td>'+r.label+'</td>'+
+      '<td class="mono">'+mi.toFixed(2)+' mi</td>'+
+      '<td class="mono">'+fmtSec(r.sec)+'</td>'+
+      '<td class="mono">'+paceStr(paceSecPerMi)+'</td>'+
+      '<td class="mono">'+r.hr+'</td>';
+    tbody.appendChild(tr);
+  });
+  document.getElementById('runsRange').textContent = data.runs[data.runs.length-1].date.slice(5)+' – '+data.runs[0].date.slice(5);
+
+  // weekly mileage bars (Mon-Sun, last 4 weeks incl current)
+  const weeks = {};
+  data.runs.forEach(r=>{
+    const d = new Date(r.date+'T12:00:00');
+    const mon = mondayOf(d);
+    const key = mon.toISOString().slice(0,10);
+    weeks[key] = (weeks[key]||0) + r.km*KM_TO_MI;
+  });
+  const today = new Date('2026-07-12T12:00:00');
+  const thisMon = mondayOf(today);
+  const weekKeys = [];
+  for(let i=3;i>=0;i--){
+    const d = new Date(thisMon); d.setDate(thisMon.getDate()-7*i);
+    weekKeys.push(d.toISOString().slice(0,10));
+  }
+  const maxMi = Math.max(...weekKeys.map(k=>weeks[k]||0), 1);
+  const wb = document.getElementById('weekBars');
+  wb.innerHTML='';
+  weekKeys.forEach((k,i)=>{
+    const mi = weeks[k]||0;
+    const h = Math.max(4, (mi/maxMi)*100);
+    const isCurrent = (i===3);
+    const div = document.createElement('div');
+    div.className='wb';
+    div.innerHTML = '<div class="mi">'+mi.toFixed(1)+'</div>'+
+      '<div class="fill" style="height:'+h+'px;'+(isCurrent?'background:var(--amber);opacity:1;':'')+'"></div>'+
+      '<div class="lab">'+k.slice(5)+(isCurrent?' (now)':'')+'</div>';
+    wb.appendChild(div);
+  });
+
+  document.getElementById('syncTime').textContent = 'snapshot: 2026-07-12';
+}
+
+function renderSpark(elId, values, labelId, startLabel, endLabel, isHR, isSleep){
+  const el = document.getElementById(elId);
+  el.innerHTML='';
+  const min = Math.min(...values), max = Math.max(...values);
+  const range = (max-min)||1;
+  values.forEach(v=>{
+    const h = 8 + ((v-min)/range)*54;
+    const bar = document.createElement('div');
+    let cls='bar';
+    if(isSleep){ if(v<50) cls+=' low'; else if(v<80) cls+=' mid'; }
+    bar.className=cls;
+    bar.style.height = h+'px';
+    bar.title = v;
+    el.appendChild(bar);
+  });
+  const labs = document.getElementById(labelId);
+  labs.innerHTML = '<span>'+startLabel+'</span><span>'+endLabel+'</span>';
+}
+
+/* ---------- manual Oura log (persisted via artifact storage) ---------- */
+async function loadOuraLog(){
+  const body = document.getElementById('ouraBody');
+  try{
+    const list = await window.storage.list('oura:', false);
+    if(!list || !list.keys || list.keys.length===0){ return; }
+    const entries = [];
+    for(const k of list.keys){
+      try{
+        const res = await window.storage.get(k, false);
+        if(res) entries.push(JSON.parse(res.value));
+      }catch(e){}
+    }
+    entries.sort((a,b)=> a.date < b.date ? 1 : -1);
+    if(entries.length===0) return;
+    body.innerHTML='';
+    entries.slice(0,10).forEach(e=>{
+      const tr = document.createElement('tr');
+      tr.innerHTML = '<td class="mono">'+e.date+'</td><td class="mono">'+(e.readiness??'—')+'</td>'+
+        '<td class="mono">'+(e.sleep??'—')+'</td><td class="mono">'+(e.hrv??'—')+'</td>';
+      body.appendChild(tr);
+    });
+  }catch(e){ /* no entries yet, keep placeholder */ }
+}
+
+async function saveOura(){
+  const date = document.getElementById('ouraDate').value || new Date().toISOString().slice(0,10);
+  const entry = {
+    date,
+    readiness: document.getElementById('ouraReadiness').value || null,
+    sleep: document.getElementById('ouraSleep').value || null,
+    hrv: document.getElementById('ouraHrv').value || null
+  };
+  try{
+    await window.storage.set('oura:'+date, JSON.stringify(entry), false);
+    await loadOuraLog();
+  }catch(e){
+    alert('Could not save entry: '+e.message);
+  }
+}
+
+/* ---------- live refresh via Anthropic API + Coros MCP ---------- */
+async function refreshCoros(){
+  const btn = document.getElementById('refreshBtn');
+  const status = document.getElementById('statusMsg');
+  btn.disabled = true; status.className=''; status.textContent = 'pulling from Coros…';
+  try{
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1000,
+        system: "You have Coros MCP tools available. Call queryRecoveryStatus, queryTrainingLoadAssessment (days=1), queryFitnessAssessmentOverview, and queryRestingHeartRate (days=1) as needed to answer. Then respond with ONLY one JSON object, no markdown fences, no prose, exactly this shape: {\"recovery\":{\"percent\":number,\"level\":string,\"fullRecoveryHours\":number},\"trainingLoad\":{\"date\":string,\"shortTerm\":number,\"longTerm\":number,\"ratio\":number,\"comment\":string},\"fitness\":{\"vo2max\":number,\"runningLevel\":number,\"thresholdPaceKm\":string,\"pred5k\":string,\"pred10k\":string,\"predHalf\":string,\"predMarathon\":string},\"restingHRLatest\":{\"date\":string,\"bpm\":number}}",
+        messages:[{role:'user', content:'Pull my current Coros stats now.'}],
+        mcp_servers:[{type:'url', url:'https://mcpus.coros.com/mcp', name:'coros-mcp'}]
+      })
+    });
+    const data = await resp.json();
+    if(data.error) throw new Error(data.error.message || 'API error');
+    const textBlocks = (data.content||[]).filter(b=>b.type==='text').map(b=>b.text);
+    if(textBlocks.length===0) throw new Error('No text response returned');
+    const raw = textBlocks[textBlocks.length-1];
+    const clean = raw.replace(/```json|```/g,'').trim();
+    const parsed = JSON.parse(clean);
+
+    // merge into SEED shape and re-render
+    SEED.recovery = parsed.recovery;
+    SEED.trainingLoad = parsed.trainingLoad;
+    SEED.loadTrend.push([parsed.trainingLoad.date.slice(5), parsed.trainingLoad.ratio]);
+    SEED.loadTrend.shift();
+    SEED.fitness = parsed.fitness;
+    SEED.restingHR.push([parsed.restingHRLatest.date.slice(5), parsed.restingHRLatest.bpm]);
+    SEED.restingHR.shift();
+    renderAll(SEED);
+    document.getElementById('syncTime').textContent = 'live sync: '+new Date().toLocaleString();
+    status.className='ok'; status.textContent = 'updated ✓';
+  }catch(err){
+    console.error(err);
+    status.className='err'; status.textContent = 'refresh failed — '+err.message;
+  }finally{
+    btn.disabled = false;
+  }
+}
+
+/* ---------- init ---------- */
+document.getElementById('ouraDate').valueAsDate = new Date('2026-07-12');
+renderAll(SEED);
+document.getElementById('syncTime').textContent = 'snapshot pulled 2026-07-12 · click refresh for live data';
+loadOuraLog();
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+name: Sync & Deploy
+
+on:
+  schedule:
+    - cron: '17 */3 * * *' # every 3 hours (offset to dodge top-of-hour congestion)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ['site/data.json'] # data commits from this workflow shouldn't re-trigger
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sync-deploy
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Pull latest from COROS + Oura
+        env:
+          COROS_EMAIL: ${{ secrets.COROS_EMAIL }}
+          COROS_PASSWORD: ${{ secrets.COROS_PASSWORD }}
+          COROS_REGION: ${{ vars.COROS_REGION || 'us' }}
+          OURA_TOKEN: ${{ secrets.OURA_TOKEN }}
+        run: |
+          if [ -z "$COROS_EMAIL" ]; then
+            echo "::warning::COROS secrets not configured yet — deploying existing data.json"
+          else
+            node sync/sync.mjs
+          fi
+
+      - name: Commit updated data.json
+        run: |
+          git config user.name "sync-bot"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet site/data.json; then
+            git add site/data.json
+            git commit -m "data sync $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

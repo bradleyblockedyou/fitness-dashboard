@@ -1,0 +1,503 @@
+{
+ "generatedAt": "2026-07-12T15:30:51.898Z",
+ "source": "fixtures",
+ "athlete": {
+  "name": "Bradley",
+  "race": {
+   "name": "Long Beach Half",
+   "date": "2026-10-10",
+   "goalSec": 7140
+  }
+ },
+ "recovery": {
+  "percent": 98,
+  "level": "Heavy training allowed",
+  "fullRecoveryHours": 6
+ },
+ "fitness": {
+  "vo2max": 39,
+  "runningLevel": 66,
+  "thresholdPaceSecPerKm": 347,
+  "predictions": {
+   "k5": 1677,
+   "k10": 3556,
+   "half": 8120,
+   "marathon": 17550
+  }
+ },
+ "daily": [
+  {
+   "date": "2026-06-12",
+   "baseFitness": 66,
+   "loadImpact": 83,
+   "intensityTrend": 1.25,
+   "status": "Optimized",
+   "rhr": null,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-13",
+   "baseFitness": 65,
+   "loadImpact": 77,
+   "intensityTrend": 1.18,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-14",
+   "baseFitness": 66,
+   "loadImpact": 80,
+   "intensityTrend": 1.21,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-15",
+   "baseFitness": 65,
+   "loadImpact": 73,
+   "intensityTrend": 1.12,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-16",
+   "baseFitness": 65,
+   "loadImpact": 73,
+   "intensityTrend": 1.12,
+   "status": "Optimized",
+   "rhr": 66,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-17",
+   "baseFitness": 66,
+   "loadImpact": 74,
+   "intensityTrend": 1.12,
+   "status": "Optimized",
+   "rhr": 61,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-18",
+   "baseFitness": 67,
+   "loadImpact": 80,
+   "intensityTrend": 1.19,
+   "status": "Optimized",
+   "rhr": 64,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-19",
+   "baseFitness": 67,
+   "loadImpact": 80,
+   "intensityTrend": 1.19,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-20",
+   "baseFitness": 66,
+   "loadImpact": 72,
+   "intensityTrend": 1.09,
+   "status": "Optimized",
+   "rhr": 62,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-21",
+   "baseFitness": 71,
+   "loadImpact": 98,
+   "intensityTrend": 1.38,
+   "status": "Optimized",
+   "rhr": 67,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-22",
+   "baseFitness": 70,
+   "loadImpact": 90,
+   "intensityTrend": 1.28,
+   "status": "Optimized",
+   "rhr": 65,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-23",
+   "baseFitness": 70,
+   "loadImpact": 90,
+   "intensityTrend": 1.28,
+   "status": "Optimized",
+   "rhr": 64,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-24",
+   "baseFitness": 71,
+   "loadImpact": 92,
+   "intensityTrend": 1.29,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-25",
+   "baseFitness": 71,
+   "loadImpact": 86,
+   "intensityTrend": 1.21,
+   "status": "Optimized",
+   "rhr": 65,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-26",
+   "baseFitness": 72,
+   "loadImpact": 91,
+   "intensityTrend": 1.26,
+   "status": "Optimized",
+   "rhr": 62,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-27",
+   "baseFitness": 71,
+   "loadImpact": 82,
+   "intensityTrend": 1.15,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": null,
+   "corosSleepMin": null
+  },
+  {
+   "date": "2026-06-28",
+   "baseFitness": 74,
+   "loadImpact": 98,
+   "intensityTrend": 1.32,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": 69,
+   "corosSleepMin": 516
+  },
+  {
+   "date": "2026-06-29",
+   "baseFitness": 74,
+   "loadImpact": 97,
+   "intensityTrend": 1.31,
+   "status": "Optimized",
+   "rhr": 65,
+   "corosSleepScore": 42,
+   "corosSleepMin": 494
+  },
+  {
+   "date": "2026-06-30",
+   "baseFitness": 76,
+   "loadImpact": 103,
+   "intensityTrend": 1.35,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": 72,
+   "corosSleepMin": 477
+  },
+  {
+   "date": "2026-07-01",
+   "baseFitness": 75,
+   "loadImpact": 97,
+   "intensityTrend": 1.29,
+   "status": "Optimized",
+   "rhr": 66,
+   "corosSleepScore": 34,
+   "corosSleepMin": 358
+  },
+  {
+   "date": "2026-07-02",
+   "baseFitness": 78,
+   "loadImpact": 110,
+   "intensityTrend": 1.41,
+   "status": "Optimized",
+   "rhr": 66,
+   "corosSleepScore": 80,
+   "corosSleepMin": 457
+  },
+  {
+   "date": "2026-07-03",
+   "baseFitness": 79,
+   "loadImpact": 109,
+   "intensityTrend": 1.37,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": 33,
+   "corosSleepMin": 277
+  },
+  {
+   "date": "2026-07-04",
+   "baseFitness": 79,
+   "loadImpact": 108,
+   "intensityTrend": 1.36,
+   "status": "Optimized",
+   "rhr": 63,
+   "corosSleepScore": 48,
+   "corosSleepMin": 494
+  },
+  {
+   "date": "2026-07-05",
+   "baseFitness": 81,
+   "loadImpact": 115,
+   "intensityTrend": 1.41,
+   "status": "Optimized",
+   "rhr": 62,
+   "corosSleepScore": 33,
+   "corosSleepMin": 279
+  },
+  {
+   "date": "2026-07-06",
+   "baseFitness": 79,
+   "loadImpact": 99,
+   "intensityTrend": 1.25,
+   "status": "Optimized",
+   "rhr": 64,
+   "corosSleepScore": 37,
+   "corosSleepMin": 494
+  },
+  {
+   "date": "2026-07-07",
+   "baseFitness": 82,
+   "loadImpact": 114,
+   "intensityTrend": 1.39,
+   "status": "Optimized",
+   "rhr": 62,
+   "corosSleepScore": 45,
+   "corosSleepMin": 430
+  },
+  {
+   "date": "2026-07-08",
+   "baseFitness": 82,
+   "loadImpact": 107,
+   "intensityTrend": 1.3,
+   "status": "Optimized",
+   "rhr": 65,
+   "corosSleepScore": 97,
+   "corosSleepMin": 528
+  },
+  {
+   "date": "2026-07-09",
+   "baseFitness": 80,
+   "loadImpact": 92,
+   "intensityTrend": 1.15,
+   "status": "Optimized",
+   "rhr": 64,
+   "corosSleepScore": 34,
+   "corosSleepMin": 176
+  },
+  {
+   "date": "2026-07-10",
+   "baseFitness": 82,
+   "loadImpact": 101,
+   "intensityTrend": 1.23,
+   "status": "Optimized",
+   "rhr": 64,
+   "corosSleepScore": 87,
+   "corosSleepMin": 359
+  },
+  {
+   "date": "2026-07-11",
+   "baseFitness": 83,
+   "loadImpact": 109,
+   "intensityTrend": 1.31,
+   "status": "Optimized",
+   "rhr": 66,
+   "corosSleepScore": 80,
+   "corosSleepMin": 472
+  },
+  {
+   "date": "2026-07-12",
+   "baseFitness": 81,
+   "loadImpact": 93,
+   "intensityTrend": 1.14,
+   "status": "Optimized",
+   "rhr": 66,
+   "corosSleepScore": 45,
+   "corosSleepMin": 532
+  }
+ ],
+ "oura": [],
+ "activities": [
+  {
+   "date": "2026-07-11",
+   "name": "9km Easy Run",
+   "sportType": 100,
+   "km": 9.01,
+   "sec": 4027,
+   "avgHr": 144
+  },
+  {
+   "date": "2026-07-10",
+   "name": "5km Time Trial",
+   "sportType": 100,
+   "km": 6.62,
+   "sec": 2662,
+   "avgHr": 161
+  },
+  {
+   "date": "2026-07-08",
+   "name": "5.5km Easy Run",
+   "sportType": 100,
+   "km": 5.51,
+   "sec": 2385,
+   "avgHr": 142
+  },
+  {
+   "date": "2026-07-07",
+   "name": "200m Repeats",
+   "sportType": 100,
+   "km": 5.91,
+   "sec": 2705,
+   "avgHr": 153
+  },
+  {
+   "date": "2026-07-05",
+   "name": "10mi Progressive Long Run",
+   "sportType": 100,
+   "km": 10.31,
+   "sec": 4772,
+   "avgHr": 144
+  },
+  {
+   "date": "2026-07-04",
+   "name": "4.5mi Easy Run",
+   "sportType": 100,
+   "km": 7.67,
+   "sec": 3599,
+   "avgHr": 143
+  },
+  {
+   "date": "2026-07-03",
+   "name": "4.5mi Easy Run",
+   "sportType": 100,
+   "km": 7.25,
+   "sec": 3353,
+   "avgHr": 143
+  },
+  {
+   "date": "2026-07-02",
+   "name": "Fast 8-4-2s",
+   "sportType": 100,
+   "km": 7.87,
+   "sec": 3415,
+   "avgHr": 147
+  },
+  {
+   "date": "2026-07-01",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 4.86,
+   "sec": 2363,
+   "avgHr": 144
+  },
+  {
+   "date": "2026-06-30",
+   "name": "Over and Unders 400m",
+   "sportType": 100,
+   "km": 8.06,
+   "sec": 3311,
+   "avgHr": 150
+  },
+  {
+   "date": "2026-06-29",
+   "name": "4.5mi Easy Run",
+   "sportType": 100,
+   "km": 6.89,
+   "sec": 2904,
+   "avgHr": 144
+  },
+  {
+   "date": "2026-06-28",
+   "name": "9mi Long Run",
+   "sportType": 100,
+   "km": 14.52,
+   "sec": 6787,
+   "avgHr": 143
+  },
+  {
+   "date": "2026-06-27",
+   "name": "2.5mi Easy Run",
+   "sportType": 100,
+   "km": 3.68,
+   "sec": 1799,
+   "avgHr": 130
+  },
+  {
+   "date": "2026-06-26",
+   "name": "Steady into Tempo",
+   "sportType": 100,
+   "km": 6.58,
+   "sec": 2738,
+   "avgHr": 152
+  },
+  {
+   "date": "2026-06-25",
+   "name": "3mi Easy Run",
+   "sportType": 100,
+   "km": 4.84,
+   "sec": 2279,
+   "avgHr": 136
+  },
+  {
+   "date": "2026-06-24",
+   "name": "5.5mi Easy Run",
+   "sportType": 100,
+   "km": 8.86,
+   "sec": 4148,
+   "avgHr": 140
+  },
+  {
+   "date": "2026-06-23",
+   "name": "4mi Easy Run",
+   "sportType": 100,
+   "km": 6.44,
+   "sec": 2816,
+   "avgHr": 145
+  },
+  {
+   "date": "2026-06-22",
+   "name": "2.5mi Easy Run",
+   "sportType": 100,
+   "km": 4.04,
+   "sec": 1937,
+   "avgHr": 136
+  },
+  {
+   "date": "2026-06-21",
+   "name": "9mi Hotspot Long Run",
+   "sportType": 100,
+   "km": 14.49,
+   "sec": 6676,
+   "avgHr": 151
+  },
+  {
+   "date": "2026-06-20",
+   "name": "2mi Easy Run",
+   "sportType": 100,
+   "km": 3.23,
+   "sec": 1695,
+   "avgHr": 125
+  }
+ ]
+}
