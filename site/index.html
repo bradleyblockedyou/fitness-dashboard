@@ -58,6 +58,27 @@
   .sub b{color:var(--text);font-family:var(--mono);font-weight:600;}
   .top-right{text-align:right;}
   #syncTime{font-family:var(--mono);font-size:12px;color:var(--text-faint);}
+  .sync-btn{
+    font-family:var(--sans);font-weight:600;font-size:12.5px;
+    background:rgba(39,163,133,0.12);color:var(--s-basefit);border:1px solid rgba(39,163,133,0.35);
+    padding:7px 14px;border-radius:7px;cursor:pointer;margin-top:8px;
+    transition:all .15s ease;
+  }
+  .sync-btn:hover{background:rgba(39,163,133,0.22);}
+  .sync-btn:disabled{opacity:0.5;cursor:wait;}
+  #syncStatus{font-family:var(--mono);font-size:11px;margin-top:6px;color:var(--text-faint);min-height:14px;}
+  #syncStatus.err{color:var(--s-intensity);}
+  #syncStatus.ok{color:var(--s-basefit);}
+  #tokenRow{display:none;gap:6px;margin-top:8px;}
+  #tokenRow input{
+    background:var(--bg-alt);border:1px solid var(--border);border-radius:7px;
+    padding:7px 10px;color:var(--text);font-family:var(--mono);font-size:11.5px;width:210px;
+  }
+  #tokenRow input:focus{outline:none;border-color:var(--s-basefit);}
+  #tokenRow button{
+    background:var(--s-basefit);color:#06201a;border:none;border-radius:7px;
+    padding:7px 12px;font-weight:700;font-size:12px;cursor:pointer;
+  }
   #syncBadge{
     display:inline-flex;align-items:center;gap:7px;
     font-family:var(--mono);font-size:11px;color:var(--teal);
@@ -212,6 +233,12 @@
     <div class="top-right">
       <div id="syncBadge"><span class="dot"></span><span id="syncBadgeText">loading…</span></div>
       <div id="syncTime"></div>
+      <button class="sync-btn" id="syncNowBtn">↻ Sync now</button>
+      <div id="tokenRow">
+        <input type="password" id="tokenInput" placeholder="fine-grained PAT (Actions R/W)" autocomplete="off">
+        <button id="tokenSave">Save</button>
+      </div>
+      <div id="syncStatus"></div>
     </div>
   </div>
 
@@ -872,10 +899,13 @@ $('liftRanges').addEventListener('click',(e)=>{
   renderLiftChart();
 });
 
-fetch('golift.json?t='+Date.now())
-  .then(r=>r.ok?r.json():null)
-  .then(g=>{ if(!g||!g.sessions?.length){showLiftEmpty();return;} liftView.backup=g; renderStrength(); })
-  .catch(showLiftEmpty);
+function loadGolift(){
+  return fetch('golift.json?t='+Date.now())
+    .then(r=>r.ok?r.json():null)
+    .then(g=>{ if(!g||!g.sessions?.length){showLiftEmpty();return;} liftView.backup=g; renderStrength(); })
+    .catch(showLiftEmpty);
+}
+loadGolift();
 
 /* ---------- init ---------- */
 $('rangeBtns').addEventListener('click',(e)=>{
@@ -893,13 +923,99 @@ new ResizeObserver(()=>{
   resizeTimer = setTimeout(()=>{renderTsChart();renderLiftChart();},120);
 }).observe($('tsChart'));
 
-fetch('data.json?t='+Date.now())
-  .then(r=>{ if(!r.ok) throw new Error('data.json missing ('+r.status+')'); return r.json(); })
-  .then(renderAll)
-  .catch(err=>{
-    $('syncBadgeText').textContent = 'no data — '+err.message;
-    $('syncBadge').classList.add('stale');
-  });
+function loadData(){
+  return fetch('data.json?t='+Date.now())
+    .then(r=>{ if(!r.ok) throw new Error('data.json missing ('+r.status+')'); return r.json(); })
+    .then(d=>{ renderAll(d); return d; })
+    .catch(err=>{
+      $('syncBadgeText').textContent = 'no data — '+err.message;
+      $('syncBadge').classList.add('stale');
+    });
+}
+loadData();
+
+/* ---------- manual sync (workflow dispatch with a browser-stored PAT) ---------- */
+const SYNC_REPO = 'bradleyblockedyou/fitness-dashboard';
+const SYNC_WORKFLOW = 'sync.yml';
+const TOKEN_KEY = 'ghSyncToken';
+
+const syncStatus = (msg, cls='') => { const el=$('syncStatus'); el.className=cls; el.textContent=msg; };
+const ghHeaders = (token) => ({
+  'Authorization':'Bearer '+token,
+  'Accept':'application/vnd.github+json',
+  'X-GitHub-Api-Version':'2022-11-28',
+});
+const sleep = (ms) => new Promise(r=>setTimeout(r,ms));
+
+$('syncNowBtn').addEventListener('click', ()=>{
+  const token = localStorage.getItem(TOKEN_KEY);
+  if(!token){
+    $('tokenRow').style.display='flex';
+    syncStatus('paste a fine-grained PAT: this repo only, Actions read & write — stored only in this browser');
+    $('tokenInput').focus();
+    return;
+  }
+  runManualSync(token);
+});
+$('tokenSave').addEventListener('click', ()=>{
+  const v = $('tokenInput').value.trim();
+  if(!v) return;
+  localStorage.setItem(TOKEN_KEY, v);
+  $('tokenInput').value='';
+  $('tokenRow').style.display='none';
+  runManualSync(v);
+});
+
+async function runManualSync(token){
+  const btn = $('syncNowBtn');
+  btn.disabled = true;
+  try{
+    const before = (await fetch('data.json?t='+Date.now()).then(r=>r.json()).catch(()=>null))?.generatedAt;
+
+    syncStatus('starting sync…');
+    const dispatch = await fetch(`https://api.github.com/repos/${SYNC_REPO}/actions/workflows/${SYNC_WORKFLOW}/dispatches`,{
+      method:'POST', headers:ghHeaders(token), body:JSON.stringify({ref:'main'})
+    });
+    if(dispatch.status===401 || dispatch.status===403){
+      localStorage.removeItem(TOKEN_KEY);
+      throw new Error('token rejected ('+dispatch.status+') — click Sync now to re-enter it');
+    }
+    if(dispatch.status!==204) throw new Error('dispatch failed ('+dispatch.status+')');
+
+    // watch the run: takes a few seconds to appear, ~a minute to finish
+    syncStatus('pulling Coros + Oura…');
+    await sleep(6000);
+    for(let i=0;i<40;i++){
+      const runs = await fetch(`https://api.github.com/repos/${SYNC_REPO}/actions/runs?per_page=1&event=workflow_dispatch`,
+        {headers:ghHeaders(token)}).then(r=>r.json());
+      const run = runs.workflow_runs?.[0];
+      if(run?.status==='completed'){
+        if(run.conclusion!=='success') throw new Error('sync run failed — check Actions on GitHub');
+        break;
+      }
+      syncStatus('pulling Coros + Oura… ('+run?.status+')');
+      await sleep(5000);
+    }
+
+    // wait for the Pages deploy to surface the new data.json
+    syncStatus('deploying…');
+    for(let i=0;i<24;i++){
+      await sleep(7500);
+      const fresh = await fetch('data.json?t='+Date.now()).then(r=>r.json()).catch(()=>null);
+      if(fresh && fresh.generatedAt !== before){
+        renderAll(fresh);
+        await loadGolift();
+        syncStatus('updated ✓','ok');
+        btn.disabled=false;
+        return;
+      }
+    }
+    throw new Error('timed out waiting for deploy — it may still land in a minute; reload to check');
+  }catch(err){
+    syncStatus(err.message,'err');
+    btn.disabled=false;
+  }
+}
 </script>
 </body>
 </html>
