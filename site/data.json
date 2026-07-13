@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-13T04:02:18.543Z",
+ "generatedAt": "2026-07-13T04:27:33.989Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2260,6 +2260,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "478866008371658954",
+   "date": "2026-07-12",
+   "name": "10km Long Run",
+   "sportType": 100,
+   "km": 10.01,
+   "sec": 4511,
+   "avgHr": 140,
+   "trainingLoad": 105
+  },
   {
    "labelId": "478836278339600388",
    "date": "2026-07-11",
