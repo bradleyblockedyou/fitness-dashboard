@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-13T09:48:25.947Z",
+ "generatedAt": "2026-07-13T15:12:36.805Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -1774,7 +1774,7 @@
    "loadImpact": 93,
    "intensityTrend": 1.12,
    "trainingLoad": 0,
-   "rhr": null,
+   "rhr": 58,
    "corosHrv": null,
    "status": "Optimized"
   }
@@ -2267,6 +2267,11 @@
    "sleepMin": 586,
    "hrv": 24,
    "lowestHr": 62
+  },
+  {
+   "date": "2026-07-13",
+   "readiness": 57,
+   "sleepScore": 52
   }
  ],
  "activities": [
