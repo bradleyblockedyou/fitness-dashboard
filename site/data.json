@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-12T23:05:59.810Z",
+ "generatedAt": "2026-07-13T04:02:18.543Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 66.2,
-  "thresholdPaceSecPerKm": 347,
+  "runningLevel": 66.4,
+  "thresholdPaceSecPerKm": 346,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -1758,14 +1758,14 @@
   },
   {
    "date": "2026-07-12",
-   "baseFitness": 81,
-   "loadImpact": 93,
-   "intensityTrend": 1.13,
+   "baseFitness": 84,
+   "loadImpact": 108,
+   "intensityTrend": 1.28,
    "status": "Optimized",
-   "rhr": 59,
+   "rhr": 58,
    "corosSleepScore": 45,
    "corosSleepMin": 532,
-   "trainingLoad": 0,
+   "trainingLoad": 105,
    "corosHrv": 28
   }
  ],
@@ -2253,7 +2253,10 @@
   {
    "date": "2026-07-12",
    "readiness": 85,
-   "sleepScore": 94
+   "sleepScore": 94,
+   "sleepMin": 586,
+   "hrv": 24,
+   "lowestHr": 62
   }
  ],
  "activities": [
