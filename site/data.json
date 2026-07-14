@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-13T22:10:45.038Z",
+ "generatedAt": "2026-07-14T03:35:09.674Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -1773,7 +1773,7 @@
    "baseFitness": 82,
    "loadImpact": 93,
    "intensityTrend": 1.12,
-   "trainingLoad": 3,
+   "trainingLoad": 6,
    "rhr": 57,
    "corosHrv": null,
    "status": "Optimized"
@@ -2283,6 +2283,16 @@
    "km": 2.5,
    "sec": 572,
    "avgHr": 109,
+   "trainingLoad": 3
+  },
+  {
+   "labelId": "478885673953165616",
+   "date": "2026-07-13",
+   "name": "Santa Ana Road Bike",
+   "sportType": 200,
+   "km": 2.31,
+   "sec": 484,
+   "avgHr": 111,
    "trainingLoad": 3
   },
   {
