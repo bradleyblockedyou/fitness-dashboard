@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-15T03:36:14.993Z",
+ "generatedAt": "2026-07-15T08:36:28.351Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,7 +16,7 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 66.4,
+  "runningLevel": 66.5,
   "thresholdPaceSecPerKm": 346,
   "predictions": {
    "k5": 1677,
@@ -1780,12 +1780,22 @@
   },
   {
    "date": "2026-07-14",
-   "baseFitness": 80,
-   "loadImpact": 80,
-   "intensityTrend": 1,
-   "trainingLoad": 0,
+   "baseFitness": 86,
+   "loadImpact": 116,
+   "intensityTrend": 1.34,
+   "trainingLoad": 254,
    "rhr": 55,
    "corosHrv": 36,
+   "status": "Optimized"
+  },
+  {
+   "date": "2026-07-15",
+   "baseFitness": 84,
+   "loadImpact": 100,
+   "intensityTrend": 1.19,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
    "status": "Optimized"
   }
  ],
@@ -2289,10 +2299,20 @@
    "sleepScore": 87,
    "hrv": 27,
    "lowestHr": 59,
-   "sleepMin": 492
+   "sleepMin": 12
   }
  ],
  "activities": [
+  {
+   "labelId": "478912569843679431",
+   "date": "2026-07-14",
+   "name": "Run",
+   "sportType": 100,
+   "km": 10.82,
+   "sec": 4976,
+   "avgHr": 149,
+   "trainingLoad": 254
+  },
   {
    "labelId": "478877237293121739",
    "date": "2026-07-13",
