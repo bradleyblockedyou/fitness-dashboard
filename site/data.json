@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-15T22:13:48.273Z",
+ "generatedAt": "2026-07-16T03:38:31.295Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -1790,10 +1790,10 @@
   },
   {
    "date": "2026-07-15",
-   "baseFitness": 84,
-   "loadImpact": 100,
-   "intensityTrend": 1.19,
-   "trainingLoad": 0,
+   "baseFitness": 86,
+   "loadImpact": 110,
+   "intensityTrend": 1.27,
+   "trainingLoad": 71,
    "rhr": 53,
    "corosHrv": 31,
    "status": "Optimized"
@@ -2304,10 +2304,23 @@
   {
    "date": "2026-07-15",
    "readiness": 74,
-   "sleepScore": 83
+   "sleepScore": 83,
+   "hrv": 22,
+   "lowestHr": 62,
+   "sleepMin": 408
   }
  ],
  "activities": [
+  {
+   "labelId": "478934359552852168",
+   "date": "2026-07-15",
+   "name": "5mi Easy Run",
+   "sportType": 101,
+   "km": 8.13,
+   "sec": 3624,
+   "avgHr": 136,
+   "trainingLoad": 71
+  },
   {
    "labelId": "478912569843679431",
    "date": "2026-07-14",
