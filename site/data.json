@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-16T22:15:49.480Z",
+ "generatedAt": "2026-07-17T03:38:34.631Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -1800,11 +1800,11 @@
   },
   {
    "date": "2026-07-16",
-   "baseFitness": 84,
-   "loadImpact": 94,
-   "intensityTrend": 1.11,
-   "trainingLoad": 0,
-   "rhr": 59,
+   "baseFitness": 86,
+   "loadImpact": 110,
+   "intensityTrend": 1.27,
+   "trainingLoad": 114,
+   "rhr": 54,
    "corosHrv": 31,
    "status": "Optimized"
   }
@@ -2322,10 +2322,23 @@
   {
    "date": "2026-07-16",
    "readiness": 88,
-   "sleepScore": 96
+   "sleepScore": 96,
+   "hrv": 26,
+   "lowestHr": 60,
+   "sleepMin": 553
   }
  ],
  "activities": [
+  {
+   "labelId": "478957920671793153",
+   "date": "2026-07-16",
+   "name": "Over and Unders Miles",
+   "sportType": 100,
+   "km": 8.16,
+   "sec": 3574,
+   "avgHr": 144,
+   "trainingLoad": 114
+  },
   {
    "labelId": "478934359552852168",
    "date": "2026-07-15",
