@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-18T22:08:22.741Z",
+ "generatedAt": "2026-07-19T03:55:34.430Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -1820,10 +1820,10 @@
   },
   {
    "date": "2026-07-18",
-   "baseFitness": 84,
-   "loadImpact": 90,
-   "intensityTrend": 1.07,
-   "trainingLoad": 0,
+   "baseFitness": 85,
+   "loadImpact": 97,
+   "intensityTrend": 1.13,
+   "trainingLoad": 50,
    "rhr": 57,
    "corosHrv": 32,
    "status": "Optimized"
@@ -2358,10 +2358,23 @@
   {
    "date": "2026-07-18",
    "readiness": 73,
-   "sleepScore": 82
+   "sleepScore": 82,
+   "hrv": 35,
+   "lowestHr": 65,
+   "sleepMin": 2
   }
  ],
  "activities": [
+  {
+   "labelId": "479004390605226284",
+   "date": "2026-07-18",
+   "name": "3.75mi Easy Run",
+   "sportType": 100,
+   "km": 6.04,
+   "sec": 2706,
+   "avgHr": 134,
+   "trainingLoad": 50
+  },
   {
    "labelId": "478982171399323951",
    "date": "2026-07-17",
