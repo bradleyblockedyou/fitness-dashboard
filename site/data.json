@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-19T22:09:37.350Z",
+ "generatedAt": "2026-07-20T04:05:41.208Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -1830,10 +1830,10 @@
   },
   {
    "date": "2026-07-19",
-   "baseFitness": 83,
-   "loadImpact": 83,
-   "intensityTrend": 1,
-   "trainingLoad": 0,
+   "baseFitness": 85,
+   "loadImpact": 93,
+   "intensityTrend": 1.09,
+   "trainingLoad": 69,
    "rhr": 53,
    "corosHrv": 34,
    "status": "Optimized"
@@ -2376,10 +2376,23 @@
   {
    "date": "2026-07-19",
    "readiness": 90,
-   "sleepScore": 92
+   "sleepScore": 92,
+   "hrv": 28,
+   "lowestHr": 58,
+   "sleepMin": 6
   }
  ],
  "activities": [
+  {
+   "labelId": "479025064694546434",
+   "date": "2026-07-19",
+   "name": "11mi Long Run",
+   "sportType": 101,
+   "km": 9.66,
+   "sec": 4513,
+   "avgHr": 129,
+   "trainingLoad": 69
+  },
   {
    "labelId": "479004390605226284",
    "date": "2026-07-18",
