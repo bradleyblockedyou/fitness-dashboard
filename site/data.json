@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-21T03:46:15.840Z",
+ "generatedAt": "2026-07-21T08:46:20.003Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -1845,6 +1845,16 @@
    "intensityTrend": 0.96,
    "trainingLoad": 0,
    "rhr": 64,
+   "corosHrv": null,
+   "status": "Maintaining"
+  },
+  {
+   "date": "2026-07-21",
+   "baseFitness": 81,
+   "loadImpact": 68,
+   "intensityTrend": 0.83,
+   "trainingLoad": 0,
+   "rhr": null,
    "corosHrv": null,
    "status": "Maintaining"
   }
