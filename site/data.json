@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-25T10:45:56.024Z",
+ "generatedAt": "2026-07-25T14:03:14.028Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 66.3,
-  "thresholdPaceSecPerKm": 347,
+  "runningLevel": 66.1,
+  "thresholdPaceSecPerKm": 348,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -1890,11 +1890,11 @@
   },
   {
    "date": "2026-07-25",
-   "baseFitness": 75,
-   "loadImpact": 42,
-   "intensityTrend": 0.56,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 76,
+   "loadImpact": 50,
+   "intensityTrend": 0.65,
+   "trainingLoad": 58,
+   "rhr": 55,
    "corosHrv": null,
    "status": "Performance"
   }
@@ -2483,6 +2483,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "479154075047330092",
+   "date": "2026-07-25",
+   "name": "3 Easy",
+   "sportType": 100,
+   "km": 4.85,
+   "sec": 2068,
+   "avgHr": 143,
+   "trainingLoad": 58
+  },
   {
    "labelId": "479118073826148354",
    "date": "2026-07-23",
