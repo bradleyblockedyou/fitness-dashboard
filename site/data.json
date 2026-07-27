@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-26T22:13:57.102Z",
+ "generatedAt": "2026-07-27T04:03:16.509Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 66.1,
-  "thresholdPaceSecPerKm": 348,
+  "runningLevel": 66,
+  "thresholdPaceSecPerKm": 349,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -1900,10 +1900,10 @@
   },
   {
    "date": "2026-07-26",
-   "baseFitness": 74,
-   "loadImpact": 43,
-   "intensityTrend": 0.57,
-   "trainingLoad": 0,
+   "baseFitness": 75,
+   "loadImpact": 51,
+   "intensityTrend": 0.68,
+   "trainingLoad": 54,
    "rhr": null,
    "corosHrv": null,
    "status": "Performance"
@@ -2502,10 +2502,23 @@
   {
    "date": "2026-07-26",
    "readiness": 85,
-   "sleepScore": 90
+   "sleepScore": 90,
+   "hrv": 29,
+   "lowestHr": 58,
+   "sleepMin": 468
   }
  ],
  "activities": [
+  {
+   "labelId": "479189852926018035",
+   "date": "2026-07-26",
+   "name": "4 Easy",
+   "sportType": 100,
+   "km": 4.84,
+   "sec": 1944,
+   "avgHr": 143,
+   "trainingLoad": 54
+  },
   {
    "labelId": "479154075047330092",
    "date": "2026-07-25",
