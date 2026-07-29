@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-29T11:34:24.781Z",
+ "generatedAt": "2026-07-29T14:32:18.648Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,7 +16,7 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 66,
+  "runningLevel": 65.9,
   "thresholdPaceSecPerKm": 349,
   "predictions": {
    "k5": 1677,
@@ -1930,13 +1930,13 @@
   },
   {
    "date": "2026-07-29",
-   "baseFitness": 70,
-   "loadImpact": 32,
-   "intensityTrend": 0.45,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 73,
+   "loadImpact": 47,
+   "intensityTrend": 0.64,
+   "trainingLoad": 108,
+   "rhr": 55,
    "corosHrv": null,
-   "status": "Decreasing"
+   "status": "Performance"
   }
  ],
  "oura": [
@@ -2552,9 +2552,34 @@
    "hrv": 29,
    "lowestHr": 57,
    "sleepMin": 443
+  },
+  {
+   "date": "2026-07-29",
+   "readiness": 83,
+   "sleepScore": 87
   }
  ],
  "activities": [
+  {
+   "labelId": "479245924265132142",
+   "date": "2026-07-29",
+   "name": "Strides",
+   "sportType": 100,
+   "km": 0.51,
+   "sec": 289,
+   "avgHr": 138,
+   "trainingLoad": 19
+  },
+  {
+   "labelId": "479245766964051972",
+   "date": "2026-07-29",
+   "name": "Easy Run",
+   "sportType": 100,
+   "km": 8.05,
+   "sec": 3769,
+   "avgHr": 140,
+   "trainingLoad": 89
+  },
   {
    "labelId": "479189852926018035",
    "date": "2026-07-26",
