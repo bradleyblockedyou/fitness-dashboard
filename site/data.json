@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-05T22:28:07.702Z",
+ "generatedAt": "2026-08-06T03:39:11.087Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2004,7 +2004,7 @@
    "loadImpact": 29,
    "intensityTrend": 0.44,
    "trainingLoad": 0,
-   "rhr": 62,
+   "rhr": 56,
    "corosHrv": 26,
    "status": "Decreasing"
   }
@@ -2674,10 +2674,23 @@
   {
    "date": "2026-08-05",
    "readiness": 75,
-   "sleepScore": 92
+   "sleepScore": 92,
+   "sleepMin": 499,
+   "hrv": 20,
+   "lowestHr": 64
   }
  ],
  "activities": [
+  {
+   "labelId": "479419735688118477",
+   "date": "2026-08-05",
+   "name": "Strength A",
+   "sportType": 402,
+   "km": 0,
+   "sec": 2194,
+   "avgHr": 80,
+   "trainingLoad": 0
+  },
   {
    "labelId": "479386365939712304",
    "date": "2026-08-04",
