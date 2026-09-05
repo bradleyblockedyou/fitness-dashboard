@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-06T14:35:47.371Z",
+ "generatedAt": "2026-09-05T17:00:32.289Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 65.6,
-  "thresholdPaceSecPerKm": 352,
+  "runningLevel": 65.1,
+  "thresholdPaceSecPerKm": 359,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2017,6 +2017,306 @@
    "rhr": 57,
    "corosHrv": 37,
    "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-07",
+   "baseFitness": 65,
+   "loadImpact": 36,
+   "intensityTrend": 0.55,
+   "trainingLoad": 103,
+   "rhr": 61,
+   "corosHrv": 29,
+   "status": "Performance"
+  },
+  {
+   "date": "2026-08-08",
+   "baseFitness": 63,
+   "loadImpact": 31,
+   "intensityTrend": 0.49,
+   "trainingLoad": 0,
+   "rhr": 58,
+   "corosHrv": 26,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-09",
+   "baseFitness": 62,
+   "loadImpact": 27,
+   "intensityTrend": 0.43,
+   "trainingLoad": 3,
+   "rhr": 59,
+   "corosHrv": 27,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-10",
+   "baseFitness": 60,
+   "loadImpact": 23,
+   "intensityTrend": 0.38,
+   "trainingLoad": 0,
+   "rhr": 58,
+   "corosHrv": 33,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-11",
+   "baseFitness": 59,
+   "loadImpact": 20,
+   "intensityTrend": 0.33,
+   "trainingLoad": 0,
+   "rhr": 58,
+   "corosHrv": 31,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-12",
+   "baseFitness": 57,
+   "loadImpact": 17,
+   "intensityTrend": 0.28,
+   "trainingLoad": 0,
+   "rhr": 47,
+   "corosHrv": 31,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-13",
+   "baseFitness": 56,
+   "loadImpact": 15,
+   "intensityTrend": 0.26,
+   "trainingLoad": 1,
+   "rhr": 59,
+   "corosHrv": 26,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-14",
+   "baseFitness": 55,
+   "loadImpact": 13,
+   "intensityTrend": 0.23,
+   "trainingLoad": 0,
+   "rhr": 57,
+   "corosHrv": 31,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-15",
+   "baseFitness": 55,
+   "loadImpact": 21,
+   "intensityTrend": 0.38,
+   "trainingLoad": 75,
+   "rhr": 58,
+   "corosHrv": 32,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-16",
+   "baseFitness": 54,
+   "loadImpact": 19,
+   "intensityTrend": 0.35,
+   "trainingLoad": 3,
+   "rhr": 53,
+   "corosHrv": 26,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-17",
+   "baseFitness": 54,
+   "loadImpact": 23,
+   "intensityTrend": 0.42,
+   "trainingLoad": 51,
+   "rhr": 66,
+   "corosHrv": 26,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-18",
+   "baseFitness": 53,
+   "loadImpact": 20,
+   "intensityTrend": 0.37,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-19",
+   "baseFitness": 52,
+   "loadImpact": 24,
+   "intensityTrend": 0.46,
+   "trainingLoad": 46,
+   "rhr": 68,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-20",
+   "baseFitness": 51,
+   "loadImpact": 20,
+   "intensityTrend": 0.39,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-21",
+   "baseFitness": 50,
+   "loadImpact": 17,
+   "intensityTrend": 0.34,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-22",
+   "baseFitness": 49,
+   "loadImpact": 16,
+   "intensityTrend": 0.32,
+   "trainingLoad": 9,
+   "rhr": 70,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-23",
+   "baseFitness": 48,
+   "loadImpact": 14,
+   "intensityTrend": 0.28,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-24",
+   "baseFitness": 47,
+   "loadImpact": 12,
+   "intensityTrend": 0.25,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-25",
+   "baseFitness": 46,
+   "loadImpact": 10,
+   "intensityTrend": 0.21,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-26",
+   "baseFitness": 44,
+   "loadImpact": 9,
+   "intensityTrend": 0.2,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-27",
+   "baseFitness": 43,
+   "loadImpact": 8,
+   "intensityTrend": 0.18,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-28",
+   "baseFitness": 42,
+   "loadImpact": 6,
+   "intensityTrend": 0.14,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-29",
+   "baseFitness": 43,
+   "loadImpact": 13,
+   "intensityTrend": 0.3,
+   "trainingLoad": 54,
+   "rhr": 67,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-30",
+   "baseFitness": 42,
+   "loadImpact": 15,
+   "intensityTrend": 0.35,
+   "trainingLoad": 25,
+   "rhr": 58,
+   "corosHrv": 24,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-08-31",
+   "baseFitness": 41,
+   "loadImpact": 13,
+   "intensityTrend": 0.31,
+   "trainingLoad": 0,
+   "rhr": 65,
+   "corosHrv": 32,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-09-01",
+   "baseFitness": 40,
+   "loadImpact": 11,
+   "intensityTrend": 0.27,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-09-02",
+   "baseFitness": 39,
+   "loadImpact": 9,
+   "intensityTrend": 0.23,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-09-03",
+   "baseFitness": 38,
+   "loadImpact": 8,
+   "intensityTrend": 0.21,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-09-04",
+   "baseFitness": 38,
+   "loadImpact": 7,
+   "intensityTrend": 0.18,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
+  },
+  {
+   "date": "2026-09-05",
+   "baseFitness": 37,
+   "loadImpact": 6,
+   "intensityTrend": 0.16,
+   "trainingLoad": 0,
+   "rhr": null,
+   "corosHrv": null,
+   "status": "Decreasing"
   }
  ],
  "oura": [
@@ -2684,13 +2984,383 @@
   {
    "date": "2026-08-05",
    "readiness": 75,
-   "sleepScore": 92,
-   "sleepMin": 499,
+   "sleepScore": 93,
+   "sleepMin": 503,
    "hrv": 20,
    "lowestHr": 64
+  },
+  {
+   "date": "2026-08-06",
+   "readiness": 88,
+   "sleepScore": 91,
+   "hrv": 31,
+   "lowestHr": 58,
+   "sleepMin": 514
+  },
+  {
+   "date": "2026-08-07",
+   "readiness": 75,
+   "sleepScore": 85,
+   "hrv": 21,
+   "lowestHr": 61,
+   "sleepMin": 457
+  },
+  {
+   "date": "2026-08-08",
+   "readiness": 78,
+   "sleepScore": 91,
+   "hrv": 22,
+   "lowestHr": 62,
+   "sleepMin": 21
+  },
+  {
+   "date": "2026-08-09",
+   "readiness": 79,
+   "sleepScore": 77,
+   "hrv": 22,
+   "lowestHr": 61,
+   "sleepMin": 393
+  },
+  {
+   "date": "2026-08-10",
+   "readiness": 86,
+   "sleepScore": 92,
+   "hrv": 25,
+   "lowestHr": 62,
+   "sleepMin": 481
+  },
+  {
+   "date": "2026-08-11",
+   "readiness": 87,
+   "sleepScore": 93,
+   "hrv": 28,
+   "lowestHr": 59,
+   "sleepMin": 483
+  },
+  {
+   "date": "2026-08-12",
+   "readiness": 89,
+   "sleepScore": 94,
+   "hrv": 24,
+   "lowestHr": 61,
+   "sleepMin": 506
+  },
+  {
+   "date": "2026-08-13",
+   "readiness": 84,
+   "sleepScore": 92,
+   "hrv": 20,
+   "lowestHr": 65,
+   "sleepMin": 548
+  },
+  {
+   "date": "2026-08-14",
+   "readiness": 84,
+   "sleepScore": 90,
+   "hrv": 22,
+   "lowestHr": 63,
+   "sleepMin": 499
+  },
+  {
+   "date": "2026-08-15",
+   "readiness": 90,
+   "sleepScore": 94,
+   "hrv": 22,
+   "lowestHr": 60,
+   "sleepMin": 503
+  },
+  {
+   "date": "2026-08-16",
+   "readiness": 90,
+   "sleepScore": 90,
+   "hrv": 23,
+   "lowestHr": 64,
+   "sleepMin": 175
+  },
+  {
+   "date": "2026-08-17",
+   "readiness": 84,
+   "sleepScore": 85,
+   "sleepMin": 438,
+   "hrv": 22,
+   "lowestHr": 62
+  },
+  {
+   "date": "2026-08-18",
+   "readiness": 79,
+   "sleepScore": 84,
+   "hrv": 20,
+   "lowestHr": 62,
+   "sleepMin": 455
+  },
+  {
+   "date": "2026-08-19",
+   "readiness": 81,
+   "sleepScore": 88,
+   "hrv": 17,
+   "lowestHr": 64,
+   "sleepMin": 503
+  },
+  {
+   "date": "2026-08-20",
+   "readiness": 71,
+   "sleepScore": 80,
+   "hrv": 18,
+   "lowestHr": 65,
+   "sleepMin": 387
+  },
+  {
+   "date": "2026-08-21",
+   "readiness": 82,
+   "sleepScore": 93,
+   "hrv": 18,
+   "lowestHr": 64,
+   "sleepMin": 9
+  },
+  {
+   "date": "2026-08-22",
+   "readiness": 82,
+   "sleepScore": 91,
+   "hrv": 18,
+   "lowestHr": 63,
+   "sleepMin": 497
+  },
+  {
+   "date": "2026-08-23",
+   "readiness": 79,
+   "sleepScore": 91,
+   "hrv": 25,
+   "lowestHr": 63,
+   "sleepMin": 5
+  },
+  {
+   "date": "2026-08-24",
+   "readiness": 81,
+   "sleepScore": 89,
+   "sleepMin": 466,
+   "hrv": 19,
+   "lowestHr": 63
+  },
+  {
+   "date": "2026-08-25",
+   "readiness": 89,
+   "sleepScore": 93,
+   "hrv": 22,
+   "lowestHr": 60,
+   "sleepMin": 14
+  },
+  {
+   "date": "2026-08-26",
+   "readiness": 81,
+   "sleepScore": 85,
+   "sleepMin": 483,
+   "hrv": 19,
+   "lowestHr": 63
+  },
+  {
+   "date": "2026-08-27",
+   "readiness": 82,
+   "sleepScore": 94,
+   "sleepMin": 539,
+   "hrv": 21,
+   "lowestHr": 64
+  },
+  {
+   "date": "2026-08-28",
+   "readiness": 79,
+   "sleepScore": 88,
+   "sleepMin": 474,
+   "hrv": 21,
+   "lowestHr": 62
+  },
+  {
+   "date": "2026-08-29",
+   "readiness": 82,
+   "sleepScore": 92,
+   "sleepMin": 9,
+   "hrv": 16,
+   "lowestHr": 64
+  },
+  {
+   "date": "2026-08-30",
+   "readiness": 74,
+   "sleepScore": 70,
+   "hrv": 21,
+   "lowestHr": 71,
+   "sleepMin": 25
+  },
+  {
+   "date": "2026-08-31",
+   "readiness": 84,
+   "sleepScore": 87,
+   "sleepMin": 492,
+   "hrv": 23,
+   "lowestHr": 60
+  },
+  {
+   "date": "2026-09-01",
+   "readiness": 87,
+   "sleepScore": 93,
+   "sleepMin": 565,
+   "hrv": 20,
+   "lowestHr": 63
+  },
+  {
+   "date": "2026-09-02",
+   "readiness": 80,
+   "sleepScore": 90,
+   "hrv": 21,
+   "lowestHr": 61,
+   "sleepMin": 437
+  },
+  {
+   "date": "2026-09-03",
+   "readiness": 88,
+   "sleepScore": 94,
+   "hrv": 23,
+   "lowestHr": 62,
+   "sleepMin": 6
+  },
+  {
+   "date": "2026-09-04",
+   "readiness": 85,
+   "sleepScore": 95,
+   "sleepMin": 540,
+   "hrv": 21,
+   "lowestHr": 63
   }
  ],
  "activities": [
+  {
+   "labelId": "480023445686485391",
+   "date": "2026-08-30",
+   "name": "3.75mi Long Run",
+   "sportType": 101,
+   "km": 2.42,
+   "sec": 1215,
+   "avgHr": 135,
+   "trainingLoad": 25
+  },
+  {
+   "labelId": "479974427218444490",
+   "date": "2026-08-29",
+   "name": "2.75mi Easy Run",
+   "sportType": 101,
+   "km": 4.43,
+   "sec": 2185,
+   "avgHr": 140,
+   "trainingLoad": 54
+  },
+  {
+   "labelId": "479811832113037413",
+   "date": "2026-08-22",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 1.24,
+   "sec": 603,
+   "avgHr": 127,
+   "trainingLoad": 9
+  },
+  {
+   "labelId": "479744643253174475",
+   "date": "2026-08-19",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 3.82,
+   "sec": 1797,
+   "avgHr": 140,
+   "trainingLoad": 46
+  },
+  {
+   "labelId": "479698225394122853",
+   "date": "2026-08-17",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 3.72,
+   "sec": 1800,
+   "avgHr": 142,
+   "trainingLoad": 51
+  },
+  {
+   "labelId": "479673774413742082",
+   "date": "2026-08-16",
+   "name": "Strength",
+   "sportType": 402,
+   "km": 0,
+   "sec": 1268,
+   "avgHr": 98,
+   "trainingLoad": 3
+  },
+  {
+   "labelId": "479653600409190401",
+   "date": "2026-08-15",
+   "name": "Strength B",
+   "sportType": 402,
+   "km": 0,
+   "sec": 2192,
+   "avgHr": 88,
+   "trainingLoad": 1
+  },
+  {
+   "labelId": "479642828366971081",
+   "date": "2026-08-15",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 3.93,
+   "sec": 1801,
+   "avgHr": 152,
+   "trainingLoad": 74
+  },
+  {
+   "labelId": "479605312091881673",
+   "date": "2026-08-13",
+   "name": "Strength A",
+   "sportType": 402,
+   "km": 0,
+   "sec": 2190,
+   "avgHr": 87,
+   "trainingLoad": 1
+  },
+  {
+   "labelId": "479505283918364672",
+   "date": "2026-08-09",
+   "name": "Strength C",
+   "sportType": 402,
+   "km": 0,
+   "sec": 1319,
+   "avgHr": 95,
+   "trainingLoad": 3
+  },
+  {
+   "labelId": "479464357170807186",
+   "date": "2026-08-07",
+   "name": "Strength B",
+   "sportType": 402,
+   "km": 0,
+   "sec": 2323,
+   "avgHr": 91,
+   "trainingLoad": 1
+  },
+  {
+   "labelId": "479456063320523259",
+   "date": "2026-08-07",
+   "name": "Strides",
+   "sportType": 100,
+   "km": 0.58,
+   "sec": 320,
+   "avgHr": 144,
+   "trainingLoad": 25
+  },
+  {
+   "labelId": "479456063320523258",
+   "date": "2026-08-07",
+   "name": "Easy Run",
+   "sportType": 100,
+   "km": 4.83,
+   "sec": 2077,
+   "avgHr": 150,
+   "trainingLoad": 77
+  },
   {
    "labelId": "479419735688118477",
    "date": "2026-08-05",
