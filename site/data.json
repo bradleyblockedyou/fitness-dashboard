@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-12T15:33:03.926Z",
+ "generatedAt": "2026-09-12T20:34:05.455Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 65.1,
-  "thresholdPaceSecPerKm": 359,
+  "runningLevel": 65,
+  "thresholdPaceSecPerKm": 362,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2380,13 +2380,13 @@
   },
   {
    "date": "2026-09-12",
-   "baseFitness": 31,
-   "loadImpact": 2,
-   "intensityTrend": 0.06,
-   "trainingLoad": 0,
+   "baseFitness": 34,
+   "loadImpact": 21,
+   "intensityTrend": 0.61,
+   "trainingLoad": 133,
    "rhr": 60,
    "corosHrv": null,
-   "status": "Decreasing"
+   "status": "Performance"
   }
  ],
  "oura": [
@@ -3301,6 +3301,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480292400296656900",
+   "date": "2026-09-12",
+   "name": "Speed",
+   "sportType": 100,
+   "km": 4.11,
+   "sec": 1857,
+   "avgHr": 148,
+   "trainingLoad": 133
+  },
   {
    "labelId": "480023445686485391",
    "date": "2026-08-30",
