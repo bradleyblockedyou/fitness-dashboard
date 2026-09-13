@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-12T23:03:25.296Z",
+ "generatedAt": "2026-09-13T04:49:52.313Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 65,
-  "thresholdPaceSecPerKm": 362,
+  "runningLevel": 65.1,
+  "thresholdPaceSecPerKm": 360,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2280,29 +2280,29 @@
   },
   {
    "date": "2026-09-02",
-   "baseFitness": 39,
-   "loadImpact": 9,
-   "intensityTrend": 0.23,
-   "trainingLoad": 0,
+   "baseFitness": 40,
+   "loadImpact": 10,
+   "intensityTrend": 0.25,
+   "trainingLoad": 5,
    "rhr": null,
    "corosHrv": null,
    "status": "Decreasing"
   },
   {
    "date": "2026-09-03",
-   "baseFitness": 38,
-   "loadImpact": 8,
-   "intensityTrend": 0.21,
-   "trainingLoad": 0,
+   "baseFitness": 40,
+   "loadImpact": 18,
+   "intensityTrend": 0.45,
+   "trainingLoad": 66,
    "rhr": null,
    "corosHrv": null,
    "status": "Decreasing"
   },
   {
    "date": "2026-09-04",
-   "baseFitness": 38,
-   "loadImpact": 7,
-   "intensityTrend": 0.18,
+   "baseFitness": 39,
+   "loadImpact": 16,
+   "intensityTrend": 0.41,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -2310,83 +2310,83 @@
   },
   {
    "date": "2026-09-05",
-   "baseFitness": 37,
-   "loadImpact": 6,
-   "intensityTrend": 0.16,
-   "trainingLoad": 0,
+   "baseFitness": 39,
+   "loadImpact": 17,
+   "intensityTrend": 0.43,
+   "trainingLoad": 24,
    "rhr": null,
    "corosHrv": null,
    "status": "Decreasing"
   },
   {
    "date": "2026-09-06",
-   "baseFitness": 36,
-   "loadImpact": 5,
-   "intensityTrend": 0.13,
-   "trainingLoad": 0,
+   "baseFitness": 41,
+   "loadImpact": 28,
+   "intensityTrend": 0.68,
+   "trainingLoad": 96,
    "rhr": null,
    "corosHrv": null,
-   "status": "Decreasing"
+   "status": "Performance"
   },
   {
    "date": "2026-09-07",
-   "baseFitness": 35,
-   "loadImpact": 4,
-   "intensityTrend": 0.11,
+   "baseFitness": 40,
+   "loadImpact": 24,
+   "intensityTrend": 0.6,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
-   "status": "Decreasing"
+   "status": "Performance"
   },
   {
    "date": "2026-09-08",
-   "baseFitness": 34,
-   "loadImpact": 4,
-   "intensityTrend": 0.11,
-   "trainingLoad": 0,
+   "baseFitness": 40,
+   "loadImpact": 27,
+   "intensityTrend": 0.67,
+   "trainingLoad": 44,
    "rhr": null,
    "corosHrv": null,
-   "status": "Decreasing"
+   "status": "Performance"
   },
   {
    "date": "2026-09-09",
-   "baseFitness": 33,
-   "loadImpact": 3,
-   "intensityTrend": 0.09,
-   "trainingLoad": 0,
+   "baseFitness": 40,
+   "loadImpact": 25,
+   "intensityTrend": 0.62,
+   "trainingLoad": 15,
    "rhr": null,
    "corosHrv": null,
-   "status": "Decreasing"
+   "status": "Performance"
   },
   {
    "date": "2026-09-10",
-   "baseFitness": 32,
-   "loadImpact": 3,
-   "intensityTrend": 0.09,
-   "trainingLoad": 0,
+   "baseFitness": 40,
+   "loadImpact": 30,
+   "intensityTrend": 0.75,
+   "trainingLoad": 57,
    "rhr": null,
    "corosHrv": null,
-   "status": "Decreasing"
+   "status": "Performance"
   },
   {
    "date": "2026-09-11",
-   "baseFitness": 32,
-   "loadImpact": 2,
-   "intensityTrend": 0.06,
+   "baseFitness": 39,
+   "loadImpact": 25,
+   "intensityTrend": 0.64,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
-   "status": "Decreasing"
+   "status": "Performance"
   },
   {
    "date": "2026-09-12",
-   "baseFitness": 34,
-   "loadImpact": 21,
-   "intensityTrend": 0.61,
+   "baseFitness": 42,
+   "loadImpact": 41,
+   "intensityTrend": 0.97,
    "trainingLoad": 133,
    "rhr": 60,
    "corosHrv": null,
-   "status": "Performance"
+   "status": "Maintaining"
   }
  ],
  "oura": [
@@ -3310,6 +3310,86 @@
    "sec": 1857,
    "avgHr": 148,
    "trainingLoad": 133
+  },
+  {
+   "labelId": "480300168007155812",
+   "date": "2026-09-11",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 4.07,
+   "sec": 1801,
+   "avgHr": 0,
+   "trainingLoad": 0
+  },
+  {
+   "labelId": "480300168015544327",
+   "date": "2026-09-10",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 2.64,
+   "sec": 986,
+   "avgHr": 143,
+   "trainingLoad": 57
+  },
+  {
+   "labelId": "480300168544026827",
+   "date": "2026-09-09",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 1.37,
+   "sec": 674,
+   "avgHr": 138,
+   "trainingLoad": 15
+  },
+  {
+   "labelId": "480300168283979980",
+   "date": "2026-09-08",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 2.79,
+   "sec": 1346,
+   "avgHr": 146,
+   "trainingLoad": 44
+  },
+  {
+   "labelId": "480300167210237953",
+   "date": "2026-09-06",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 3.7,
+   "sec": 1456,
+   "avgHr": 149,
+   "trainingLoad": 96
+  },
+  {
+   "labelId": "480300166404931787",
+   "date": "2026-09-05",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 1.64,
+   "sec": 745,
+   "avgHr": 147,
+   "trainingLoad": 24
+  },
+  {
+   "labelId": "480300167738720660",
+   "date": "2026-09-03",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 2.44,
+   "sec": 928,
+   "avgHr": 142,
+   "trainingLoad": 66
+  },
+  {
+   "labelId": "480300166404932190",
+   "date": "2026-09-02",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 0.62,
+   "sec": 300,
+   "avgHr": 130,
+   "trainingLoad": 5
   },
   {
    "labelId": "480023445686485391",
