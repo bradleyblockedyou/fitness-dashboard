@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-14T12:49:57.844Z",
+ "generatedAt": "2026-09-14T19:51:01.698Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2400,11 +2400,11 @@
   },
   {
    "date": "2026-09-14",
-   "baseFitness": 42,
-   "loadImpact": 43,
-   "intensityTrend": 1.02,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 44,
+   "loadImpact": 53,
+   "intensityTrend": 1.2,
+   "trainingLoad": 68,
+   "rhr": 85,
    "corosHrv": null,
    "status": "Optimized"
   }
@@ -3321,6 +3321,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480336817506255048",
+   "date": "2026-09-14",
+   "name": "Training",
+   "sportType": 100,
+   "km": 4.84,
+   "sec": 2391,
+   "avgHr": 143,
+   "trainingLoad": 68
+  },
   {
    "labelId": "480315818599547082",
    "date": "2026-09-13",
