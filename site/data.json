@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T11:45:53.840Z",
+ "generatedAt": "2026-09-15T17:00:46.549Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2410,11 +2410,11 @@
   },
   {
    "date": "2026-09-15",
-   "baseFitness": 43,
-   "loadImpact": 46,
-   "intensityTrend": 1.06,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 45,
+   "loadImpact": 60,
+   "intensityTrend": 1.33,
+   "trainingLoad": 98,
+   "rhr": 83,
    "corosHrv": null,
    "status": "Optimized"
   }
@@ -3331,6 +3331,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480360589338640689",
+   "date": "2026-09-15",
+   "name": "Fartlek",
+   "sportType": 100,
+   "km": 4.04,
+   "sec": 1761,
+   "avgHr": 147,
+   "trainingLoad": 98
+  },
   {
    "labelId": "480336817506255048",
    "date": "2026-09-14",
