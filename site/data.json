@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-18T11:17:20.105Z",
+ "generatedAt": "2026-09-18T16:25:08.684Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2440,13 +2440,13 @@
   },
   {
    "date": "2026-09-18",
-   "baseFitness": 42,
-   "loadImpact": 38,
-   "intensityTrend": 0.9,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 44,
+   "loadImpact": 51,
+   "intensityTrend": 1.14,
+   "trainingLoad": 93,
+   "rhr": 71,
    "corosHrv": null,
-   "status": "Maintaining"
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3361,6 +3361,36 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480429942868312467",
+   "date": "2026-09-18",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 0.61,
+   "sec": 272,
+   "avgHr": 148,
+   "trainingLoad": 10
+  },
+  {
+   "labelId": "480429828506419402",
+   "date": "2026-09-18",
+   "name": "Run",
+   "sportType": 100,
+   "km": 3.21,
+   "sec": 1267,
+   "avgHr": 156,
+   "trainingLoad": 82
+  },
+  {
+   "labelId": "480429386661658832",
+   "date": "2026-09-18",
+   "name": "Fartlek 2",
+   "sportType": 100,
+   "km": 0.29,
+   "sec": 144,
+   "avgHr": 113,
+   "trainingLoad": 1
+  },
   {
    "labelId": "480360589338640689",
    "date": "2026-09-15",
