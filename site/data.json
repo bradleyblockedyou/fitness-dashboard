@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-17T21:23:44.023Z",
+ "generatedAt": "2026-09-18T04:45:41.634Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -15,7 +15,7 @@
   "fullRecoveryHours": 6
  },
  "fitness": {
-  "vo2max": 40,
+  "vo2max": 39,
   "runningLevel": 65.5,
   "thresholdPaceSecPerKm": 359,
   "predictions": {
