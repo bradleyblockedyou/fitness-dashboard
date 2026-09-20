@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-20T20:50:13.283Z",
+ "generatedAt": "2026-09-20T23:15:34.255Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -3381,6 +3381,26 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480483471574205117",
+   "date": "2026-09-20",
+   "name": "Newport Beach Run",
+   "sportType": 100,
+   "km": 8.08,
+   "sec": 3782,
+   "avgHr": 0,
+   "trainingLoad": 0
+  },
+  {
+   "labelId": "480483474795429895",
+   "date": "2026-09-19",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 5.53,
+   "sec": 2402,
+   "avgHr": 0,
+   "trainingLoad": 0
+  },
   {
    "labelId": "480429942868312467",
    "date": "2026-09-18",
