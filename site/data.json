@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-20T23:15:34.255Z",
+ "generatedAt": "2026-09-21T04:57:51.216Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 65.5,
-  "thresholdPaceSecPerKm": 359,
+  "runningLevel": 65.6,
+  "thresholdPaceSecPerKm": 358,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2450,23 +2450,23 @@
   },
   {
    "date": "2026-09-19",
-   "baseFitness": 43,
-   "loadImpact": 44,
-   "intensityTrend": 1.02,
-   "trainingLoad": 0,
+   "baseFitness": 45,
+   "loadImpact": 56,
+   "intensityTrend": 1.24,
+   "trainingLoad": 89,
    "rhr": null,
    "corosHrv": null,
    "status": "Optimized"
   },
   {
    "date": "2026-09-20",
-   "baseFitness": 42,
-   "loadImpact": 37,
-   "intensityTrend": 0.88,
-   "trainingLoad": 0,
+   "baseFitness": 48,
+   "loadImpact": 70,
+   "intensityTrend": 1.45,
+   "trainingLoad": 150,
    "rhr": null,
    "corosHrv": null,
-   "status": "Maintaining"
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3388,7 +3388,17 @@
    "sportType": 100,
    "km": 8.08,
    "sec": 3782,
-   "avgHr": 0,
+   "avgHr": 150,
+   "trainingLoad": 150
+  },
+  {
+   "labelId": "480487574884876288",
+   "date": "2026-09-20",
+   "name": "Santa Ana Walk",
+   "sportType": 900,
+   "km": 2.85,
+   "sec": 2785,
+   "avgHr": 91,
    "trainingLoad": 0
   },
   {
@@ -3398,8 +3408,8 @@
    "sportType": 100,
    "km": 5.53,
    "sec": 2402,
-   "avgHr": 0,
-   "trainingLoad": 0
+   "avgHr": 149,
+   "trainingLoad": 89
   },
   {
    "labelId": "480429942868312467",
