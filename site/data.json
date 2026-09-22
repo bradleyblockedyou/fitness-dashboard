@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22T11:40:39.742Z",
+ "generatedAt": "2026-09-22T16:58:14.434Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2480,11 +2480,11 @@
   },
   {
    "date": "2026-09-22",
-   "baseFitness": 45,
-   "loadImpact": 51,
-   "intensityTrend": 1.12,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 48,
+   "loadImpact": 64,
+   "intensityTrend": 1.33,
+   "trainingLoad": 92,
+   "rhr": 77,
    "corosHrv": null,
    "status": "Optimized"
   }
@@ -3401,6 +3401,36 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480522732413419524",
+   "date": "2026-09-22",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 0.46,
+   "sec": 203,
+   "avgHr": 151,
+   "trainingLoad": 7
+  },
+  {
+   "labelId": "480522732415516975",
+   "date": "2026-09-22",
+   "name": "Tustin Run",
+   "sportType": 100,
+   "km": 2.01,
+   "sec": 787,
+   "avgHr": 160,
+   "trainingLoad": 76
+  },
+  {
+   "labelId": "480522732407128172",
+   "date": "2026-09-22",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 0.89,
+   "sec": 567,
+   "avgHr": 122,
+   "trainingLoad": 9
+  },
   {
    "labelId": "480483471574205117",
    "date": "2026-09-20",
