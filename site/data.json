@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-23T11:39:11.938Z",
+ "generatedAt": "2026-09-23T17:01:50.858Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2490,12 +2490,12 @@
   },
   {
    "date": "2026-09-23",
-   "baseFitness": 46,
-   "loadImpact": 55,
-   "intensityTrend": 1.19,
-   "trainingLoad": 0,
-   "rhr": null,
-   "corosHrv": null,
+   "baseFitness": 48,
+   "loadImpact": 67,
+   "intensityTrend": 1.39,
+   "trainingLoad": 80,
+   "rhr": 61,
+   "corosHrv": 35,
    "status": "Optimized"
   }
  ],
@@ -3411,6 +3411,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480546461296132397",
+   "date": "2026-09-23",
+   "name": "JD Red Phase 1 E+ST",
+   "sportType": 100,
+   "km": 4.14,
+   "sec": 1906,
+   "avgHr": 151,
+   "trainingLoad": 80
+  },
   {
    "labelId": "480522732413419524",
    "date": "2026-09-22",
