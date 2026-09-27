@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T16:59:20.155Z",
+ "generatedAt": "2026-09-27T21:21:50.132Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -15,9 +15,9 @@
   "fullRecoveryHours": 6
  },
  "fitness": {
-  "vo2max": 39,
-  "runningLevel": 65.8,
-  "thresholdPaceSecPerKm": 357,
+  "vo2max": 40,
+  "runningLevel": 66.6,
+  "thresholdPaceSecPerKm": 353,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -1645,7 +1645,7 @@
    "rhr": 59,
    "corosSleepScore": 80,
    "corosSleepMin": 457,
-   "trainingLoad": 183,
+   "trainingLoad": 182,
    "corosHrv": 32
   },
   {
@@ -1663,8 +1663,8 @@
   {
    "date": "2026-07-04",
    "baseFitness": 78,
-   "loadImpact": 105,
-   "intensityTrend": 1.34,
+   "loadImpact": 104,
+   "intensityTrend": 1.33,
    "status": "Optimized",
    "rhr": 54,
    "corosSleepScore": 48,
@@ -1991,9 +1991,9 @@
   {
    "date": "2026-08-04",
    "baseFitness": 66,
-   "loadImpact": 34,
-   "intensityTrend": 0.51,
-   "trainingLoad": 104,
+   "loadImpact": 33,
+   "intensityTrend": 0.5,
+   "trainingLoad": 103,
    "rhr": 61,
    "corosHrv": 33,
    "status": "Performance"
@@ -2030,13 +2030,13 @@
   },
   {
    "date": "2026-08-08",
-   "baseFitness": 63,
+   "baseFitness": 62,
    "loadImpact": 31,
-   "intensityTrend": 0.49,
+   "intensityTrend": 0.5,
    "trainingLoad": 0,
    "rhr": 58,
    "corosHrv": 26,
-   "status": "Decreasing"
+   "status": "Performance"
   },
   {
    "date": "2026-08-09",
@@ -2080,9 +2080,9 @@
   },
   {
    "date": "2026-08-13",
-   "baseFitness": 56,
+   "baseFitness": 55,
    "loadImpact": 15,
-   "intensityTrend": 0.26,
+   "intensityTrend": 0.27,
    "trainingLoad": 1,
    "rhr": 59,
    "corosHrv": 26,
@@ -2091,8 +2091,8 @@
   {
    "date": "2026-08-14",
    "baseFitness": 54,
-   "loadImpact": 13,
-   "intensityTrend": 0.24,
+   "loadImpact": 12,
+   "intensityTrend": 0.22,
    "trainingLoad": 0,
    "rhr": 57,
    "corosHrv": 31,
@@ -2101,9 +2101,9 @@
   {
    "date": "2026-08-15",
    "baseFitness": 55,
-   "loadImpact": 22,
-   "intensityTrend": 0.4,
-   "trainingLoad": 76,
+   "loadImpact": 21,
+   "intensityTrend": 0.38,
+   "trainingLoad": 75,
    "rhr": 58,
    "corosHrv": 32,
    "status": "Decreasing"
@@ -2121,8 +2121,8 @@
   {
    "date": "2026-08-17",
    "baseFitness": 53,
-   "loadImpact": 24,
-   "intensityTrend": 0.45,
+   "loadImpact": 23,
+   "intensityTrend": 0.43,
    "trainingLoad": 51,
    "rhr": 66,
    "corosHrv": 26,
@@ -2160,9 +2160,9 @@
   },
   {
    "date": "2026-08-21",
-   "baseFitness": 50,
-   "loadImpact": 18,
-   "intensityTrend": 0.36,
+   "baseFitness": 49,
+   "loadImpact": 17,
+   "intensityTrend": 0.34,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -2291,9 +2291,9 @@
   {
    "date": "2026-09-03",
    "baseFitness": 40,
-   "loadImpact": 18,
-   "intensityTrend": 0.45,
-   "trainingLoad": 66,
+   "loadImpact": 17,
+   "intensityTrend": 0.42,
+   "trainingLoad": 55,
    "rhr": null,
    "corosHrv": null,
    "status": "Decreasing"
@@ -2301,8 +2301,8 @@
   {
    "date": "2026-09-04",
    "baseFitness": 39,
-   "loadImpact": 16,
-   "intensityTrend": 0.41,
+   "loadImpact": 14,
+   "intensityTrend": 0.35,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -2310,9 +2310,9 @@
   },
   {
    "date": "2026-09-05",
-   "baseFitness": 39,
-   "loadImpact": 17,
-   "intensityTrend": 0.43,
+   "baseFitness": 38,
+   "loadImpact": 16,
+   "intensityTrend": 0.42,
    "trainingLoad": 24,
    "rhr": null,
    "corosHrv": null,
@@ -2320,19 +2320,19 @@
   },
   {
    "date": "2026-09-06",
-   "baseFitness": 41,
-   "loadImpact": 28,
-   "intensityTrend": 0.68,
-   "trainingLoad": 95,
+   "baseFitness": 40,
+   "loadImpact": 26,
+   "intensityTrend": 0.65,
+   "trainingLoad": 92,
    "rhr": null,
    "corosHrv": null,
    "status": "Performance"
   },
   {
    "date": "2026-09-07",
-   "baseFitness": 40,
-   "loadImpact": 24,
-   "intensityTrend": 0.6,
+   "baseFitness": 39,
+   "loadImpact": 23,
+   "intensityTrend": 0.57,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -2341,8 +2341,8 @@
   {
    "date": "2026-09-08",
    "baseFitness": 40,
-   "loadImpact": 27,
-   "intensityTrend": 0.67,
+   "loadImpact": 26,
+   "intensityTrend": 0.65,
    "trainingLoad": 44,
    "rhr": null,
    "corosHrv": null,
@@ -2351,9 +2351,9 @@
   {
    "date": "2026-09-09",
    "baseFitness": 39,
-   "loadImpact": 25,
-   "intensityTrend": 0.64,
-   "trainingLoad": 15,
+   "loadImpact": 24,
+   "intensityTrend": 0.61,
+   "trainingLoad": 14,
    "rhr": null,
    "corosHrv": null,
    "status": "Performance"
@@ -2361,9 +2361,9 @@
   {
    "date": "2026-09-10",
    "baseFitness": 40,
-   "loadImpact": 30,
-   "intensityTrend": 0.75,
-   "trainingLoad": 57,
+   "loadImpact": 29,
+   "intensityTrend": 0.72,
+   "trainingLoad": 56,
    "rhr": null,
    "corosHrv": null,
    "status": "Performance"
@@ -2381,18 +2381,18 @@
   {
    "date": "2026-09-12",
    "baseFitness": 41,
-   "loadImpact": 41,
-   "intensityTrend": 1,
-   "trainingLoad": 132,
+   "loadImpact": 39,
+   "intensityTrend": 0.95,
+   "trainingLoad": 128,
    "rhr": 60,
    "corosHrv": null,
-   "status": "Optimized"
+   "status": "Maintaining"
   },
   {
    "date": "2026-09-13",
-   "baseFitness": 43,
-   "loadImpact": 51,
-   "intensityTrend": 1.18,
+   "baseFitness": 42,
+   "loadImpact": 50,
+   "intensityTrend": 1.19,
    "trainingLoad": 111,
    "rhr": 68,
    "corosHrv": null,
@@ -2400,29 +2400,29 @@
   },
   {
    "date": "2026-09-14",
-   "baseFitness": 44,
-   "loadImpact": 53,
+   "baseFitness": 43,
+   "loadImpact": 52,
    "intensityTrend": 1.2,
-   "trainingLoad": 68,
+   "trainingLoad": 69,
    "rhr": 85,
    "corosHrv": null,
    "status": "Optimized"
   },
   {
    "date": "2026-09-15",
-   "baseFitness": 45,
-   "loadImpact": 60,
-   "intensityTrend": 1.33,
-   "trainingLoad": 98,
+   "baseFitness": 44,
+   "loadImpact": 59,
+   "intensityTrend": 1.34,
+   "trainingLoad": 96,
    "rhr": 83,
    "corosHrv": null,
    "status": "Optimized"
   },
   {
    "date": "2026-09-16",
-   "baseFitness": 44,
-   "loadImpact": 51,
-   "intensityTrend": 1.14,
+   "baseFitness": 43,
+   "loadImpact": 50,
+   "intensityTrend": 1.15,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -2430,8 +2430,8 @@
   },
   {
    "date": "2026-09-17",
-   "baseFitness": 43,
-   "loadImpact": 44,
+   "baseFitness": 42,
+   "loadImpact": 43,
    "intensityTrend": 1.02,
    "trainingLoad": 0,
    "rhr": 88,
@@ -2440,29 +2440,29 @@
   },
   {
    "date": "2026-09-18",
-   "baseFitness": 44,
-   "loadImpact": 51,
-   "intensityTrend": 1.14,
-   "trainingLoad": 93,
+   "baseFitness": 43,
+   "loadImpact": 50,
+   "intensityTrend": 1.15,
+   "trainingLoad": 91,
    "rhr": 71,
    "corosHrv": null,
    "status": "Optimized"
   },
   {
    "date": "2026-09-19",
-   "baseFitness": 45,
+   "baseFitness": 44,
    "loadImpact": 56,
-   "intensityTrend": 1.24,
-   "trainingLoad": 89,
+   "intensityTrend": 1.27,
+   "trainingLoad": 90,
    "rhr": null,
    "corosHrv": null,
    "status": "Optimized"
   },
   {
    "date": "2026-09-20",
-   "baseFitness": 48,
-   "loadImpact": 70,
-   "intensityTrend": 1.45,
+   "baseFitness": 47,
+   "loadImpact": 69,
+   "intensityTrend": 1.46,
    "trainingLoad": 150,
    "rhr": null,
    "corosHrv": null,
@@ -2471,8 +2471,8 @@
   {
    "date": "2026-09-21",
    "baseFitness": 46,
-   "loadImpact": 60,
-   "intensityTrend": 1.3,
+   "loadImpact": 59,
+   "intensityTrend": 1.28,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -2480,9 +2480,9 @@
   },
   {
    "date": "2026-09-22",
-   "baseFitness": 48,
+   "baseFitness": 47,
    "loadImpact": 64,
-   "intensityTrend": 1.33,
+   "intensityTrend": 1.36,
    "trainingLoad": 92,
    "rhr": 56,
    "corosHrv": null,
@@ -2491,8 +2491,8 @@
   {
    "date": "2026-09-23",
    "baseFitness": 48,
-   "loadImpact": 67,
-   "intensityTrend": 1.39,
+   "loadImpact": 66,
+   "intensityTrend": 1.37,
    "trainingLoad": 80,
    "rhr": 57,
    "corosHrv": 35,
@@ -2500,9 +2500,9 @@
   },
   {
    "date": "2026-09-24",
-   "baseFitness": 49,
-   "loadImpact": 69,
-   "intensityTrend": 1.4,
+   "baseFitness": 48,
+   "loadImpact": 68,
+   "intensityTrend": 1.41,
    "trainingLoad": 82,
    "rhr": 65,
    "corosHrv": null,
@@ -2510,9 +2510,9 @@
   },
   {
    "date": "2026-09-25",
-   "baseFitness": 48,
+   "baseFitness": 47,
    "loadImpact": 59,
-   "intensityTrend": 1.22,
+   "intensityTrend": 1.25,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -2523,20 +2523,20 @@
    "baseFitness": 51,
    "loadImpact": 77,
    "intensityTrend": 1.5,
-   "trainingLoad": 187,
+   "trainingLoad": 186,
    "rhr": 60,
    "corosHrv": null,
    "status": "Excessive"
   },
   {
    "date": "2026-09-27",
-   "baseFitness": 50,
-   "loadImpact": 66,
-   "intensityTrend": 1.32,
-   "trainingLoad": 0,
+   "baseFitness": 53,
+   "loadImpact": 85,
+   "intensityTrend": 1.6,
+   "trainingLoad": 135,
    "rhr": 48,
-   "corosHrv": 33,
-   "status": "Optimized"
+   "corosHrv": 35,
+   "status": "Excessive"
   }
  ],
  "oura": [
@@ -3452,6 +3452,16 @@
  ],
  "activities": [
   {
+   "labelId": "480644523458855119",
+   "date": "2026-09-27",
+   "name": "JD Red Phase 1 Long Run",
+   "sportType": 100,
+   "km": 9.66,
+   "sec": 4856,
+   "avgHr": 143,
+   "trainingLoad": 135
+  },
+  {
    "labelId": "480625461053915440",
    "date": "2026-09-26",
    "name": "Dodgers 5K",
@@ -3459,7 +3469,7 @@
    "km": 5.1,
    "sec": 2038,
    "avgHr": 174,
-   "trainingLoad": 187
+   "trainingLoad": 186
   },
   {
    "labelId": "480569562589331656",
@@ -3539,7 +3549,7 @@
    "km": 5.53,
    "sec": 2402,
    "avgHr": 149,
-   "trainingLoad": 89
+   "trainingLoad": 90
   },
   {
    "labelId": "480429942868312467",
@@ -3559,7 +3569,7 @@
    "km": 3.21,
    "sec": 1267,
    "avgHr": 156,
-   "trainingLoad": 82
+   "trainingLoad": 80
   },
   {
    "labelId": "480429386661658832",
@@ -3579,7 +3589,7 @@
    "km": 4.04,
    "sec": 1761,
    "avgHr": 147,
-   "trainingLoad": 98
+   "trainingLoad": 96
   },
   {
    "labelId": "480336817506255048",
@@ -3589,7 +3599,7 @@
    "km": 4.84,
    "sec": 2391,
    "avgHr": 143,
-   "trainingLoad": 68
+   "trainingLoad": 69
   },
   {
    "labelId": "480315818599547082",
@@ -3609,7 +3619,7 @@
    "km": 4.11,
    "sec": 1857,
    "avgHr": 148,
-   "trainingLoad": 132
+   "trainingLoad": 128
   },
   {
    "labelId": "480300168007155812",
@@ -3629,7 +3639,7 @@
    "km": 2.64,
    "sec": 986,
    "avgHr": 143,
-   "trainingLoad": 57
+   "trainingLoad": 56
   },
   {
    "labelId": "480300168544026827",
@@ -3639,7 +3649,7 @@
    "km": 1.37,
    "sec": 674,
    "avgHr": 138,
-   "trainingLoad": 15
+   "trainingLoad": 14
   },
   {
    "labelId": "480300168283979980",
@@ -3659,7 +3669,7 @@
    "km": 3.7,
    "sec": 1456,
    "avgHr": 149,
-   "trainingLoad": 95
+   "trainingLoad": 92
   },
   {
    "labelId": "480300166404931787",
@@ -3679,7 +3689,7 @@
    "km": 2.44,
    "sec": 928,
    "avgHr": 142,
-   "trainingLoad": 66
+   "trainingLoad": 55
   },
   {
    "labelId": "480300166404932190",
@@ -3769,7 +3779,7 @@
    "km": 3.93,
    "sec": 1801,
    "avgHr": 152,
-   "trainingLoad": 75
+   "trainingLoad": 74
   },
   {
    "labelId": "479605312091881673",
@@ -3809,7 +3819,7 @@
    "km": 0.58,
    "sec": 320,
    "avgHr": 144,
-   "trainingLoad": 26
+   "trainingLoad": 25
   },
   {
    "labelId": "479456063320523258",
@@ -3819,7 +3829,7 @@
    "km": 4.83,
    "sec": 2077,
    "avgHr": 150,
-   "trainingLoad": 76
+   "trainingLoad": 77
   },
   {
    "labelId": "479419735688118477",
@@ -3839,7 +3849,7 @@
    "km": 0.52,
    "sec": 267,
    "avgHr": 149,
-   "trainingLoad": 25
+   "trainingLoad": 24
   },
   {
    "labelId": "479386240848789804",
@@ -4149,7 +4159,7 @@
    "km": 7.87,
    "sec": 3415,
    "avgHr": 147,
-   "trainingLoad": 183
+   "trainingLoad": 182
   },
   {
    "labelId": "478609902156152832",
