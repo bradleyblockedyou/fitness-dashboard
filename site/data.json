@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-26T23:38:03.006Z",
+ "generatedAt": "2026-09-27T05:20:15.498Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 39,
-  "runningLevel": 65.6,
-  "thresholdPaceSecPerKm": 358,
+  "runningLevel": 65.8,
+  "thresholdPaceSecPerKm": 357,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2520,13 +2520,13 @@
   },
   {
    "date": "2026-09-26",
-   "baseFitness": 47,
-   "loadImpact": 51,
-   "intensityTrend": 1.08,
-   "trainingLoad": 0,
+   "baseFitness": 51,
+   "loadImpact": 77,
+   "intensityTrend": 1.5,
+   "trainingLoad": 187,
    "rhr": 60,
    "corosHrv": null,
-   "status": "Optimized"
+   "status": "Excessive"
   }
  ],
  "oura": [
@@ -3441,6 +3441,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480625461053915440",
+   "date": "2026-09-26",
+   "name": "Dodgers 5K",
+   "sportType": 100,
+   "km": 5.1,
+   "sec": 2038,
+   "avgHr": 174,
+   "trainingLoad": 187
+  },
   {
    "labelId": "480569562589331656",
    "date": "2026-09-24",
