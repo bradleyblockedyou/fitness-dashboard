@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T10:09:56.933Z",
+ "generatedAt": "2026-10-01T18:26:04.524Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 40,
-  "runningLevel": 66.8,
-  "thresholdPaceSecPerKm": 352,
+  "runningLevel": 66.9,
+  "thresholdPaceSecPerKm": 351,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2570,13 +2570,13 @@
   },
   {
    "date": "2026-10-01",
-   "baseFitness": 52,
-   "loadImpact": 66,
-   "intensityTrend": 1.26,
-   "trainingLoad": 0,
+   "baseFitness": 56,
+   "loadImpact": 87,
+   "intensityTrend": 1.55,
+   "trainingLoad": 148,
    "rhr": null,
    "corosHrv": null,
-   "status": "Optimized"
+   "status": "Excessive"
   }
  ],
  "oura": [
@@ -3491,6 +3491,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480731544330207536",
+   "date": "2026-10-01",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 7.13,
+   "sec": 2969,
+   "avgHr": 156,
+   "trainingLoad": 148
+  },
   {
    "labelId": "480687103758336100",
    "date": "2026-09-29",
