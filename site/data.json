@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-05T14:42:41.639Z",
+ "generatedAt": "2026-10-05T22:01:50.449Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -3572,6 +3572,16 @@
    "trainingLoad": 187
   },
   {
+   "labelId": "480827363163144194",
+   "date": "2026-09-29",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 8.63,
+   "sec": 4326,
+   "avgHr": 152,
+   "trainingLoad": null
+  },
+  {
    "labelId": "480644523458855119",
    "date": "2026-09-27",
    "name": "JD Red Phase 1 Long Run",
@@ -3580,6 +3590,16 @@
    "sec": 4856,
    "avgHr": 143,
    "trainingLoad": 135
+  },
+  {
+   "labelId": "480827369337159683",
+   "date": "2026-09-27",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 9.66,
+   "sec": 5414,
+   "avgHr": 142,
+   "trainingLoad": null
   },
   {
    "labelId": "480625461053915440",
@@ -3592,6 +3612,16 @@
    "trainingLoad": 186
   },
   {
+   "labelId": "480827371753078786",
+   "date": "2026-09-26",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 5.1,
+   "sec": 2037,
+   "avgHr": 173,
+   "trainingLoad": null
+  },
+  {
    "labelId": "480569562589331656",
    "date": "2026-09-24",
    "name": "JD Red Phase 1 E+ST",
@@ -3602,6 +3632,16 @@
    "trainingLoad": 82
   },
   {
+   "labelId": "480569556140589167",
+   "date": "2026-09-24",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 4.62,
+   "sec": 2244,
+   "avgHr": 145,
+   "trainingLoad": null
+  },
+  {
    "labelId": "480546461296132397",
    "date": "2026-09-23",
    "name": "JD Red Phase 1 E+ST",
@@ -3610,6 +3650,16 @@
    "sec": 1906,
    "avgHr": 151,
    "trainingLoad": 80
+  },
+  {
+   "labelId": "480827380082966728",
+   "date": "2026-09-23",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 4.14,
+   "sec": 1939,
+   "avgHr": 150,
+   "trainingLoad": null
   },
   {
    "labelId": "480522732413419524",
