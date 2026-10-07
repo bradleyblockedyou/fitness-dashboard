@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T22:39:45.829Z",
+ "generatedAt": "2026-10-07T06:02:10.857Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2620,10 +2620,10 @@
   },
   {
    "date": "2026-10-06",
-   "baseFitness": 54,
-   "loadImpact": 63,
-   "intensityTrend": 1.15,
-   "trainingLoad": 0,
+   "baseFitness": 55,
+   "loadImpact": 69,
+   "intensityTrend": 1.25,
+   "trainingLoad": 44,
    "rhr": null,
    "corosHrv": null,
    "status": "Optimized"
@@ -3541,6 +3541,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480857662016225583",
+   "date": "2026-10-06",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 5.03,
+   "sec": 2354,
+   "avgHr": 133,
+   "trainingLoad": 44
+  },
   {
    "labelId": "480812902016647470",
    "date": "2026-10-04",
