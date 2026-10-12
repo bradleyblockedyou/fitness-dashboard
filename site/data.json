@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-11T19:34:04.961Z",
+ "generatedAt": "2026-10-12T00:33:30.430Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 40,
-  "runningLevel": 67,
-  "thresholdPaceSecPerKm": 350,
+  "runningLevel": 67.3,
+  "thresholdPaceSecPerKm": 349,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2660,23 +2660,23 @@
   },
   {
    "date": "2026-10-10",
-   "baseFitness": 52,
-   "loadImpact": 46,
-   "intensityTrend": 0.88,
-   "trainingLoad": 0,
+   "baseFitness": 53,
+   "loadImpact": 51,
+   "intensityTrend": 0.96,
+   "trainingLoad": 34,
    "rhr": 58,
    "corosHrv": null,
    "status": "Maintaining"
   },
   {
    "date": "2026-10-11",
-   "baseFitness": 51,
-   "loadImpact": 39,
-   "intensityTrend": 0.76,
-   "trainingLoad": 0,
+   "baseFitness": 59,
+   "loadImpact": 121,
+   "intensityTrend": 2.04,
+   "trainingLoad": 539,
    "rhr": null,
    "corosHrv": null,
-   "status": "Performance"
+   "status": "Excessive"
   }
  ],
  "oura": [
@@ -3591,6 +3591,26 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "480968959644958920",
+   "date": "2026-10-11",
+   "name": "Long Beach Run",
+   "sportType": 100,
+   "km": 21.6,
+   "sec": 10084,
+   "avgHr": 159,
+   "trainingLoad": 539
+  },
+  {
+   "labelId": "480968990246600706",
+   "date": "2026-10-10",
+   "name": "Santa Ana Run",
+   "sportType": 100,
+   "km": 2.87,
+   "sec": 1337,
+   "avgHr": 133,
+   "trainingLoad": 34
+  },
   {
    "labelId": "480921033455468544",
    "date": "2026-10-09",
