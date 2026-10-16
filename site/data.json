@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-16T16:40:41.741Z",
+ "generatedAt": "2026-10-16T21:10:45.922Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2720,13 +2720,13 @@
   },
   {
    "date": "2026-10-16",
-   "baseFitness": 56,
-   "loadImpact": 76,
-   "intensityTrend": 1.35,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 59,
+   "loadImpact": 94,
+   "intensityTrend": 1.59,
+   "trainingLoad": 124,
+   "rhr": 76,
    "corosHrv": null,
-   "status": "Optimized"
+   "status": "Excessive"
   }
  ],
  "oura": [
@@ -3641,6 +3641,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481084845915668883",
+   "date": "2026-10-16",
+   "name": "400m Repeats",
+   "sportType": 101,
+   "km": 7.68,
+   "sec": 3217,
+   "avgHr": 148,
+   "trainingLoad": 124
+  },
   {
    "labelId": "481067007312167116",
    "date": "2026-10-15",
