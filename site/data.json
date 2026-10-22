@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T21:44:03.449Z",
+ "generatedAt": "2026-10-22T04:49:41.310Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -3691,6 +3691,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481208202214539566",
+   "date": "2026-10-21",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 13.71,
+   "sec": 5679,
+   "avgHr": 146,
+   "trainingLoad": 0
+  },
   {
    "labelId": "481184482722873450",
    "date": "2026-10-20",
