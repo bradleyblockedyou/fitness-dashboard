@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T15:58:09.708Z",
+ "generatedAt": "2026-10-24T20:51:35.927Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 40,
-  "runningLevel": 67.4,
-  "thresholdPaceSecPerKm": 348,
+  "runningLevel": 67.6,
+  "thresholdPaceSecPerKm": 347,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2800,13 +2800,13 @@
   },
   {
    "date": "2026-10-24",
-   "baseFitness": 56,
-   "loadImpact": 52,
-   "intensityTrend": 0.92,
-   "trainingLoad": 0,
+   "baseFitness": 58,
+   "loadImpact": 67,
+   "intensityTrend": 1.14,
+   "trainingLoad": 99,
    "rhr": null,
    "corosHrv": null,
-   "status": "Maintaining"
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3721,6 +3721,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481268331758780518",
+   "date": "2026-10-24",
+   "name": "Irvine Run",
+   "sportType": 100,
+   "km": 6.86,
+   "sec": 2977,
+   "avgHr": 147,
+   "trainingLoad": 99
+  },
   {
    "labelId": "481254197013020674",
    "date": "2026-10-23",
