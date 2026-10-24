@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-23T21:25:32.492Z",
+ "generatedAt": "2026-10-24T04:38:37.854Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2790,13 +2790,13 @@
   },
   {
    "date": "2026-10-23",
-   "baseFitness": 55,
-   "loadImpact": 48,
-   "intensityTrend": 0.87,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 57,
+   "loadImpact": 61,
+   "intensityTrend": 1.07,
+   "trainingLoad": 94,
+   "rhr": 72,
    "corosHrv": null,
-   "status": "Maintaining"
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3711,6 +3711,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481254197013020674",
+   "date": "2026-10-23",
+   "name": "Drop Set",
+   "sportType": 101,
+   "km": 6.83,
+   "sec": 2990,
+   "avgHr": 144,
+   "trainingLoad": 94
+  },
   {
    "labelId": "481208202214539566",
    "date": "2026-10-21",
