@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T20:52:28.083Z",
+ "generatedAt": "2026-10-25T23:17:03.335Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2770,19 +2770,19 @@
   },
   {
    "date": "2026-10-21",
-   "baseFitness": 57,
-   "loadImpact": 65,
-   "intensityTrend": 1.13,
-   "trainingLoad": 0,
+   "baseFitness": 63,
+   "loadImpact": 97,
+   "intensityTrend": 1.53,
+   "trainingLoad": 221,
    "rhr": null,
    "corosHrv": null,
-   "status": "Optimized"
+   "status": "Excessive"
   },
   {
    "date": "2026-10-22",
-   "baseFitness": 56,
-   "loadImpact": 56,
-   "intensityTrend": 1,
+   "baseFitness": 61,
+   "loadImpact": 83,
+   "intensityTrend": 1.36,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -2790,9 +2790,9 @@
   },
   {
    "date": "2026-10-23",
-   "baseFitness": 57,
-   "loadImpact": 61,
-   "intensityTrend": 1.07,
+   "baseFitness": 62,
+   "loadImpact": 84,
+   "intensityTrend": 1.35,
    "trainingLoad": 94,
    "rhr": 72,
    "corosHrv": null,
@@ -2800,9 +2800,9 @@
   },
   {
    "date": "2026-10-24",
-   "baseFitness": 58,
-   "loadImpact": 67,
-   "intensityTrend": 1.14,
+   "baseFitness": 63,
+   "loadImpact": 86,
+   "intensityTrend": 1.36,
    "trainingLoad": 99,
    "rhr": null,
    "corosHrv": null,
@@ -2810,10 +2810,10 @@
   },
   {
    "date": "2026-10-25",
-   "baseFitness": 57,
-   "loadImpact": 57,
-   "intensityTrend": 1,
-   "trainingLoad": 0,
+   "baseFitness": 64,
+   "loadImpact": 87,
+   "intensityTrend": 1.35,
+   "trainingLoad": 92,
    "rhr": null,
    "corosHrv": null,
    "status": "Optimized"
@@ -3732,6 +3732,16 @@
  ],
  "activities": [
   {
+   "labelId": "481296534927867905",
+   "date": "2026-10-25",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 7.65,
+   "sec": 3575,
+   "avgHr": 141,
+   "trainingLoad": 92
+  },
+  {
    "labelId": "481268331758780518",
    "date": "2026-10-24",
    "name": "Irvine Run",
@@ -3757,9 +3767,9 @@
    "name": "Indoor Run",
    "sportType": 101,
    "km": 13.71,
-   "sec": 5679,
+   "sec": 5677,
    "avgHr": 146,
-   "trainingLoad": 0
+   "trainingLoad": 221
   },
   {
    "labelId": "481184482722873450",
