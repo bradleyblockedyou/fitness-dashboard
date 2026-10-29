@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-29T00:58:29.611Z",
+ "generatedAt": "2026-10-29T09:59:38.625Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2840,9 +2840,19 @@
   },
   {
    "date": "2026-10-28",
-   "baseFitness": 62,
-   "loadImpact": 69,
-   "intensityTrend": 1.11,
+   "baseFitness": 63,
+   "loadImpact": 74,
+   "intensityTrend": 1.17,
+   "trainingLoad": 37,
+   "rhr": 66,
+   "corosHrv": null,
+   "status": "Optimized"
+  },
+  {
+   "date": "2026-10-29",
+   "baseFitness": 61,
+   "loadImpact": 63,
+   "intensityTrend": 1.03,
    "trainingLoad": 0,
    "rhr": null,
    "corosHrv": null,
@@ -3761,6 +3771,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481369605200183500",
+   "date": "2026-10-28",
+   "name": "4mi Easy Run",
+   "sportType": 100,
+   "km": 3.59,
+   "sec": 1514,
+   "avgHr": 140,
+   "trainingLoad": 37
+  },
   {
    "labelId": "481346178038923266",
    "date": "2026-10-27",
