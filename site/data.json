@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-30T22:22:06.636Z",
+ "generatedAt": "2026-10-31T05:44:00.203Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2860,13 +2860,13 @@
   },
   {
    "date": "2026-10-30",
-   "baseFitness": 60,
-   "loadImpact": 54,
-   "intensityTrend": 0.9,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 61,
+   "loadImpact": 65,
+   "intensityTrend": 1.06,
+   "trainingLoad": 77,
+   "rhr": 64,
    "corosHrv": null,
-   "status": "Maintaining"
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3781,6 +3781,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481413390521106737",
+   "date": "2026-10-30",
+   "name": "5mi Long Run",
+   "sportType": 101,
+   "km": 8.05,
+   "sec": 3851,
+   "avgHr": 135,
+   "trainingLoad": 77
+  },
   {
    "labelId": "481369605200183500",
    "date": "2026-10-28",
