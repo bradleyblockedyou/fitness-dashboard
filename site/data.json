@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-31T12:33:21.189Z",
+ "generatedAt": "2026-10-31T19:18:23.212Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 40,
-  "runningLevel": 67.7,
-  "thresholdPaceSecPerKm": 347,
+  "runningLevel": 67.8,
+  "thresholdPaceSecPerKm": 346,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2870,13 +2870,13 @@
   },
   {
    "date": "2026-10-31",
-   "baseFitness": 60,
-   "loadImpact": 56,
-   "intensityTrend": 0.93,
-   "trainingLoad": 0,
+   "baseFitness": 64,
+   "loadImpact": 80,
+   "intensityTrend": 1.25,
+   "trainingLoad": 170,
    "rhr": null,
    "corosHrv": null,
-   "status": "Maintaining"
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3791,6 +3791,26 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481428752811720807",
+   "date": "2026-10-31",
+   "name": "Los Angeles Run",
+   "sportType": 100,
+   "km": 4.9,
+   "sec": 1746,
+   "avgHr": 171,
+   "trainingLoad": 134
+  },
+  {
+   "labelId": "481427825904091136",
+   "date": "2026-10-31",
+   "name": "Los Angeles Run",
+   "sportType": 100,
+   "km": 1.77,
+   "sec": 754,
+   "avgHr": 148,
+   "trainingLoad": 36
+  },
   {
    "labelId": "481413390521106737",
    "date": "2026-10-30",
