@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T23:40:38.154Z",
+ "generatedAt": "2026-11-05T06:49:26.021Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2910,13 +2910,13 @@
   },
   {
    "date": "2026-11-04",
-   "baseFitness": 61,
-   "loadImpact": 57,
-   "intensityTrend": 0.93,
-   "trainingLoad": 0,
-   "rhr": null,
+   "baseFitness": 63,
+   "loadImpact": 71,
+   "intensityTrend": 1.12,
+   "trainingLoad": 98,
+   "rhr": 71,
    "corosHrv": null,
-   "status": "Maintaining"
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3831,6 +3831,16 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481532166222676169",
+   "date": "2026-11-04",
+   "name": "Threshold 4 x 5 min",
+   "sportType": 101,
+   "km": 8.05,
+   "sec": 3533,
+   "avgHr": 141,
+   "trainingLoad": 98
+  },
   {
    "labelId": "481509136616423524",
    "date": "2026-11-03",
