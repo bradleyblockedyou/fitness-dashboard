@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T06:49:37.023Z",
+ "generatedAt": "2026-11-06T16:46:20.336Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 40,
-  "runningLevel": 67.8,
-  "thresholdPaceSecPerKm": 346,
+  "runningLevel": 67.6,
+  "thresholdPaceSecPerKm": 347,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2927,6 +2927,16 @@
    "rhr": 55,
    "corosHrv": null,
    "status": "Maintaining"
+  },
+  {
+   "date": "2026-11-06",
+   "baseFitness": 62,
+   "loadImpact": 64,
+   "intensityTrend": 1.03,
+   "trainingLoad": 79,
+   "rhr": 43,
+   "corosHrv": null,
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3841,6 +3851,36 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481567415824580711",
+   "date": "2026-11-06",
+   "name": "Strides 6 x 20 sec (outside)",
+   "sportType": 100,
+   "km": 1.2,
+   "sec": 521,
+   "avgHr": 151,
+   "trainingLoad": 29
+  },
+  {
+   "labelId": "481566892381733263",
+   "date": "2026-11-06",
+   "name": "Easy 48 min (treadmill)",
+   "sportType": 101,
+   "km": 4.83,
+   "sec": 2261,
+   "avgHr": 134,
+   "trainingLoad": 42
+  },
+  {
+   "labelId": "481566422084911203",
+   "date": "2026-11-06",
+   "name": "Easy 48 min (treadmill)",
+   "sportType": 101,
+   "km": 1.61,
+   "sec": 754,
+   "avgHr": 122,
+   "trainingLoad": 8
+  },
   {
    "labelId": "481532166222676169",
    "date": "2026-11-04",
