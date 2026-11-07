@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T23:10:01.243Z",
+ "generatedAt": "2026-11-07T05:59:46.497Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -2933,7 +2933,7 @@
    "baseFitness": 62,
    "loadImpact": 64,
    "intensityTrend": 1.03,
-   "trainingLoad": 79,
+   "trainingLoad": 84,
    "rhr": 43,
    "corosHrv": null,
    "status": "Optimized"
@@ -3880,6 +3880,26 @@
    "sec": 754,
    "avgHr": 122,
    "trainingLoad": 8
+  },
+  {
+   "labelId": "481579319869604042",
+   "date": "2026-11-06",
+   "name": "Sport 65535",
+   "sportType": 65535,
+   "km": 0.85,
+   "sec": 600,
+   "avgHr": 116,
+   "trainingLoad": 5
+  },
+  {
+   "labelId": "481579319863312884",
+   "date": "2026-11-06",
+   "name": "Strength",
+   "sportType": 402,
+   "km": 0,
+   "sec": 2686,
+   "avgHr": 84,
+   "trainingLoad": 0
   },
   {
    "labelId": "481532166222676169",
