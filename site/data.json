@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T22:07:06.389Z",
+ "generatedAt": "2026-11-09T06:33:11.691Z",
  "source": "live",
  "athlete": {
   "name": "Bradley",
@@ -16,8 +16,8 @@
  },
  "fitness": {
   "vo2max": 40,
-  "runningLevel": 67.6,
-  "thresholdPaceSecPerKm": 347,
+  "runningLevel": 67.7,
+  "thresholdPaceSecPerKm": 346,
   "predictions": {
    "k5": 1677,
    "k10": 3556,
@@ -2950,13 +2950,13 @@
   },
   {
    "date": "2026-11-08",
-   "baseFitness": 61,
-   "loadImpact": 57,
-   "intensityTrend": 0.93,
-   "trainingLoad": 0,
+   "baseFitness": 65,
+   "loadImpact": 81,
+   "intensityTrend": 1.24,
+   "trainingLoad": 167,
    "rhr": null,
    "corosHrv": null,
-   "status": "Maintaining"
+   "status": "Optimized"
   }
  ],
  "oura": [
@@ -3871,6 +3871,26 @@
   }
  ],
  "activities": [
+  {
+   "labelId": "481623261143138603",
+   "date": "2026-11-08",
+   "name": "Long run 1:46 (treadmill)",
+   "sportType": 101,
+   "km": 13.59,
+   "sec": 6360,
+   "avgHr": 142,
+   "trainingLoad": 167
+  },
+  {
+   "labelId": "481623318850470089",
+   "date": "2026-11-08",
+   "name": "Indoor Run",
+   "sportType": 101,
+   "km": 13.58,
+   "sec": 6363,
+   "avgHr": 141,
+   "trainingLoad": null
+  },
   {
    "labelId": "481594149320032657",
    "date": "2026-11-07",
